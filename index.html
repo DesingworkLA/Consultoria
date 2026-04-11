@@ -1,99 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Psicóloga Clínica | Atención Profesional</title>
-
-  <!-- Google Fonts (look premium) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psicóloga - Steven Landero</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- HERO / HEADER -->
-    <header class="header reveal">
-      <h1>Steven Landero</h1>
-      <span class="subtitle">Psicóloga Clínica</span>
+  <div class="header">
+    <h1>Steven Landero</h1>
+    <div class="subtitle">Psicóloga Clínica</div>
+    <p>
+      Psicóloga especializada en bienestar emocional y salud mental. 
+      Mi enfoque es cercano, humano y ético.
+    </p>
 
-      <p class="intro">
-        Acompañamiento profesional centrado en el bienestar emocional, el autoconocimiento
-        y el desarrollo personal en un espacio seguro y confidencial.
+    <div class="buttons">
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">Consultar</a>
+    </div>
+  </div>
+
+  <div class="section">
+
+    <div class="card">
+      <h3>Terapia individual</h3>
+      <p>
+        Espacio personalizado para autoconocimiento, gestión emocional 
+        y afrontamiento de dificultades.
       </p>
+    </div>
 
-      <div class="buttons">
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-        <a href="#contacto" class="primary">Consultar</a>
-      </div>
-    </header>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Terapia">
+    </div>
 
-    <!-- SERVICIOS -->
-    <section class="section">
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f" alt="Familia">
+    </div>
 
-      <div class="card reveal">
-        <h3>Terapia individual</h3>
-        <p>
-          Espacio personalizado para trabajar en tu bienestar emocional,
-          gestionar ansiedad y fortalecer tu equilibrio interno.
-        </p>
-      </div>
+    <div class="card">
+      <h3>Orientación familiar</h3>
+      <p>
+        Apoyo a familias para mejorar comunicación y fortalecer vínculos.
+      </p>
+    </div>
 
-      <div class="image-card reveal">
-        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200" />
-      </div>
+    <div class="card">
+      <h3>Apoyo adolescente</h3>
+      <p>
+        Acompañamiento profesional a jóvenes en autoestima y regulación emocional.
+      </p>
+    </div>
 
-      <div class="image-card reveal">
-        <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?q=80&w=1200" />
-      </div>
-
-      <div class="card reveal">
-        <h3>Orientación familiar</h3>
-        <p>
-          Mejora la comunicación, fortalece vínculos y construye relaciones más sanas
-          dentro del entorno familiar.
-        </p>
-      </div>
-
-      <div class="card reveal">
-        <h3>Apoyo adolescente</h3>
-        <p>
-          Acompañamiento cercano para jóvenes en etapas clave,
-          enfocándonos en autoestima, identidad y regulación emocional.
-        </p>
-      </div>
-
-      <div class="image-card reveal">
-        <img src="https://images.unsplash.com/photo-1520975922203-b2cbb1f0e1b2?q=80&w=1200" />
-      </div>
-
-    </section>
-
-    <!-- FORMULARIO -->
-    <section id="contacto" class="form-section reveal">
-      <h2>Agenda tu consulta</h2>
-      <p>Atención personalizada y totalmente confidencial</p>
-
-      <form id="formulario">
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Cuéntame brevemente tu situación..."></textarea>
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </section>
-
-    <!-- TESTIMONIO -->
-    <section class="testimonial reveal">
-      “Gracias a la atención y comprensión recibida, aprendí a gestionar mi ansiedad
-      y a valorarme más cada día.”
-    </section>
+    <div class="image-card">
+      <img src="https://images.unsplash.com/photo-1520975922203-b2cbb1f0e1b2" alt="Adolescente">
+    </div>
 
   </div>
 
-  <script src="script.js"></script>
+  <div class="form-section">
+    <h2>Agenda tu consulta</h2>
+    <p>Atención personalizada y confidencial</p>
+
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Tu mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <div class="testimonial">
+    "Gracias a la atención y comprensión de Steven, aprendí a gestionar mi ansiedad y a valorarme más cada día."
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,12 +1,14 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
-  position: relative;
   overflow-x: hidden;
 }
 
-/* Fondo con iconos de psicología */
+/* =========================
+   FONDO PSICOLOGÍA (ARREGLADO)
+========================= */
 body::before {
   content: "";
   position: fixed;
@@ -23,22 +25,28 @@ body::before {
   background-size: 120px 120px, 40px 40px, 60px 60px;
 }
 
-/* IMPORTANTE: contenido encima del fondo */
+/* =========================
+   TODO EL CONTENIDO ENCIMA
+========================= */
 body > * {
   position: relative;
   z-index: 1;
 }
 
 /* =========================
-   TU DISEÑO ORIGINAL
+   CONTAINER
 ========================= */
-
 .container {
   max-width: 1000px;
   margin: auto;
   padding: 40px 20px;
+  position: relative;
+  z-index: 1;
 }
 
+/* =========================
+   HEADER
+========================= */
 .header {
   display: flex;
   flex-direction: column;
@@ -48,7 +56,9 @@ body > * {
 .subtitle {
   color: gray;
 }
-
+/* =========================
+   BOTONES
+========================= */
 .buttons a {
   text-decoration: none;
   padding: 8px 14px;
@@ -58,6 +68,9 @@ body > * {
   color: black;
 }
 
+/* =========================
+   SECCIONES
+========================= */
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -65,12 +78,18 @@ body > * {
   margin-top: 60px;
 }
 
+/* =========================
+   CARDS
+========================= */
 .card {
   background: #f7f7f7;
   border-radius: 20px;
   padding: 30px;
 }
 
+/* =========================
+   IMÁGENES
+========================= */
 .image-card {
   border-radius: 20px;
   overflow: hidden;
@@ -83,6 +102,9 @@ body > * {
   display: block;
 }
 
+/* =========================
+   FORMULARIO
+========================= */
 .form-section {
   margin-top: 60px;
   text-align: center;
@@ -102,6 +124,9 @@ input, textarea {
   border: 1px solid #ddd;
 }
 
+/* =========================
+   BOTÓN
+========================= */
 button {
   padding: 12px;
   border: none;
@@ -111,18 +136,19 @@ button {
   cursor: pointer;
 }
 
+/* =========================
+   TESTIMONIAL
+========================= */
 .testimonial {
   margin-top: 60px;
   font-size: 18px;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 @media(max-width: 768px) {
   .section {
     grid-template-columns: 1fr;
   }
-}
-
-.container {
-  position: relative;
-  z-index: 1;
 }

@@ -333,3 +333,50 @@ button {
 .info-btn:hover {
   animation: none !important;
 }
+
+.ani {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+@keyframes rainbowGlow {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.rainbow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+  animation: rainbowGlow 3s linear infinite;
+}
+
+@keyframes bearMove {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+.bear {
+  width: 12px;
+  height: 12px;
+  background: #8b5a2b;
+  border-radius: 50%;
+  animation: bearMove 2s ease-in-out infinite;
+}
+
+@keyframes ballRoll {
+  0% { transform: translateX(0px) rotate(0deg); }
+  50% { transform: translateX(6px) rotate(180deg); }
+  100% { transform: translateX(0px) rotate(360deg); }
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  animation: ballRoll 1.8s linear infinite;
+}

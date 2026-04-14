@@ -344,22 +344,46 @@ button {
   0% { left: -40px; }
   100% { left: 130%; }
 }
+
 /* =========================
-   🧸 BOTÓN 2: OSO MICRO MOVIMIENTO
+   🧸 OSO 
 ========================= */
-.info-btn.bear::after {
-  content: "🧸";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: bearShake 2s ease-in-out infinite;
+
+.info-btn.bear {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-@keyframes bearShake {
-  0% { transform: translateY(-50%) rotate(-5deg); }
-  50% { transform: translateY(-50%) rotate(5deg); }
-  100% { transform: translateY(-50%) rotate(-5deg); }
+/* contenedor del icono */
+.bear-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* oso */
+.bear-icon::before {
+  content: "🧸";
+  font-size: 14px;
+  display: inline-block;
+  animation: bearBreath 4s ease-in-out infinite; /* 👈 lento */
+  transform-origin: center;
+}
+
+/* movimiento MUY suave */
+@keyframes bearBreath {
+  0%   { transform: translateY(0px) rotate(-2deg); }
+  50%  { transform: translateY(-1px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(-2deg); }
+}
+
+/* texto alineado bien */
+.info-btn.bear span {
+  position: relative;
 }
 
 /* =========================

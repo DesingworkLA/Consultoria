@@ -247,8 +247,6 @@ button {
     4px 4px 10px rgba(0,0,0,0.15),
     -4px -4px 10px rgba(255,255,255,0.8);
 
-  border: 1px solid rgba(255,255,255,0.6);
-
   transition: all 0.25s ease;
 }
 
@@ -258,7 +256,7 @@ button {
 }
 
 /* =========================
-   INFO BUTTON BASE
+   INFO BUTTON BASE PRO
 ========================= */
 .info-btn {
   position: relative;
@@ -282,60 +280,66 @@ button {
 }
 
 /* =========================
-   🔴 PELOTA (RODANDO LIMPIO)
+   🔴 BOTÓN 1: PELOTA FLUIDA
 ========================= */
 .info-btn.ball::before {
   content: "";
   position: absolute;
   width: 10px;
   height: 10px;
-  background: red;
+  background: #ff3b3b;
   border-radius: 50%;
   top: 50%;
-  left: -10px;
+  left: -20px;
   transform: translateY(-50%);
-  animation: ballMove 2.5s linear infinite;
+  animation: ballFlow 2.2s linear infinite;
 }
 
-@keyframes ballMove {
-  0% { left: -10px; }
-  50% { left: 50%; }
-  100% { left: 110%; }
+@keyframes ballFlow {
+  0%   { left: -20px; opacity: 0; }
+  20%  { opacity: 1; }
+  50%  { left: 50%; }
+  80%  { opacity: 1; }
+  100% { left: 120%; opacity: 0; }
 }
 
 /* =========================
-   🧸 OSO (MOVIMIENTO CABEZA)
+   🧸 BOTÓN 2: OSO MICRO MOVIMIENTO
 ========================= */
 .info-btn.bear::after {
   content: "🧸";
   position: absolute;
-  right: 10px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
-  animation: bearShake 1.8s ease-in-out infinite;
+  animation: bearShake 2s ease-in-out infinite;
 }
 
 @keyframes bearShake {
-  0% { transform: translateY(-50%) rotate(-10deg); }
-  50% { transform: translateY(-50%) rotate(10deg); }
-  100% { transform: translateY(-50%) rotate(-10deg); }
+  0% { transform: translateY(-50%) rotate(-5deg); }
+  50% { transform: translateY(-50%) rotate(5deg); }
+  100% { transform: translateY(-50%) rotate(-5deg); }
 }
 
 /* =========================
-   🌈 ARCOÍRIS (SUAVE Y PRO)
+   🌈 BOTÓN 3: ARCOÍRIS SUAVE INTERNO
 ========================= */
 .info-btn.rainbow::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: conic-gradient(
-    red, orange, yellow, green, blue, violet, red
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255,0,0,0.25),
+    rgba(255,165,0,0.2),
+    rgba(0,255,0,0.15),
+    rgba(0,0,255,0.15),
+    transparent 70%
   );
-  opacity: 0.2;
-  animation: rainbowSpin 3s linear infinite;
+  animation: rainbowPulse 3s ease-in-out infinite;
 }
 
-@keyframes rainbowSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes rainbowPulse {
+  0%   { transform: scale(0.95); opacity: 0.4; }
+  50%  { transform: scale(1.05); opacity: 0.7; }
+  100% { transform: scale(0.95); opacity: 0.4; }
 }

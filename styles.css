@@ -310,3 +310,20 @@ button {
   gap: 25px;
   margin-top: 70px;
 }
+
+@keyframes floatCircle {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(2px, -2px); }
+  50%  { transform: translate(0px, -4px); }
+  75%  { transform: translate(-2px, -2px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.info-btn {
+  animation: floatCircle 3.5s ease-in-out infinite;
+}
+
+.info-btn:hover {
+  animation: none;
+  transform: translateY(-3px);
+}

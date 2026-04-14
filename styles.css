@@ -173,6 +173,7 @@ button {
 
 .profile-box {
   display: flex;
+  flex-direction: row; /* 👈 asegura que estén a la par */
   align-items: center;
   gap: 20px;
   margin-top: 15px;
@@ -182,8 +183,14 @@ button {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 10px; /* 👈 cuadrada con bordes suaves */
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile-text p {

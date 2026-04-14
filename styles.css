@@ -282,25 +282,34 @@ button {
 /* =========================
    🔴 BOTÓN 1: PELOTA FLUIDA
 ========================= */
+.info-btn.ball {
+  position: relative;
+  overflow: hidden;
+}
+
+/* pelota en la parte inferior */
 .info-btn.ball::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  bottom: 4px; /* 👈 ABAJO del texto */
+  left: -15px;
+  width: 8px;
+  height: 8px;
   background: #ff3b3b;
   border-radius: 50%;
-  top: 50%;
-  left: -20px;
-  transform: translateY(-50%);
-  animation: ballFlow 2.2s linear infinite;
+  z-index: 0;
+  opacity: 0.9;
+  animation: ballBottomMove 2.4s linear infinite;
 }
 
-@keyframes ballFlow {
-  0%   { left: -20px; opacity: 0; }
-  20%  { opacity: 1; }
-  50%  { left: 50%; }
-  80%  { opacity: 1; }
-  100% { left: 120%; opacity: 0; }
+/* movimiento horizontal limpio abajo */
+@keyframes ballBottomMove {
+  0% {
+    left: -15px;
+  }
+  100% {
+    left: 110%;
+  }
 }
 
 /* =========================

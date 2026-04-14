@@ -258,28 +258,22 @@ button {
 }
 
 /* =========================
-   INFO BUTTON (PRO CLEAN BASE)
+   INFO BUTTON BASE
 ========================= */
 .info-btn {
   position: relative;
-  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-
   padding: 12px 14px;
   border-radius: 10px;
-
-  background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
-  color: #333;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
-
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-
-  transition: all 0.25s ease;
+  overflow: hidden;
+  background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
+  color: #333;
+  transition: 0.25s ease;
 }
 
 .info-btn:hover {
@@ -288,93 +282,60 @@ button {
 }
 
 /* =========================
-   ARCOÍRIS
-========================= */
-.info-btn.rainbow {
-  position: relative;
-  overflow: hidden;
-}
-
-.info-btn.rainbow::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  background: linear-gradient(
-    90deg,
-    #ff004c,
-    #ffb800,
-    #00ff88,
-    #00c2ff,
-    #b400ff,
-    #ff004c
-  );
-  background-size: 300% 300%;
-  animation: rainbowBorder 3s linear infinite;
-  z-index: 0;
-  border-radius: 12px;
-  opacity: 0.7;
-}
-
-.info-btn.rainbow::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  background: #e0e0e0;
-  border-radius: 10px;
-  z-index: 1;
-}
-
-.info-btn.rainbow span {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes rainbowBorder {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 300% 50%; }
-}
-
-/* =========================
-   OSO
-========================= */
-.info-btn.bear::before {
-  content: "";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  background: #8b5a2b;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  animation: bearTilt 1.8s ease-in-out infinite;
-  z-index: 2;
-}
-
-.info-btn.bear {
-  overflow: hidden;
-}
-/* =========================
-   PELOTA
+   🔴 PELOTA (RODANDO LIMPIO)
 ========================= */
 .info-btn.ball::before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #ff3b3b;
+  width: 10px;
+  height: 10px;
+  background: red;
   border-radius: 50%;
   top: 50%;
-  left: 10px;
+  left: -10px;
   transform: translateY(-50%);
-  animation: ballOrbit 2.2s linear infinite;
-  z-index: 2;
+  animation: ballMove 2.5s linear infinite;
 }
 
-@keyframes ballOrbit {
-  0%   { left: 10px; top: 50%; transform: translateY(-50%); }
-  25%  { left: 40%; top: 30%; }
-  50%  { left: 80%; top: 50%; }
-  75%  { left: 40%; top: 70%; }
-  100% { left: 10px; top: 50%; }
+@keyframes ballMove {
+  0% { left: -10px; }
+  50% { left: 50%; }
+  100% { left: 110%; }
+}
+
+/* =========================
+   🧸 OSO (MOVIMIENTO CABEZA)
+========================= */
+.info-btn.bear::after {
+  content: "🧸";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: bearShake 1.8s ease-in-out infinite;
+}
+
+@keyframes bearShake {
+  0% { transform: translateY(-50%) rotate(-10deg); }
+  50% { transform: translateY(-50%) rotate(10deg); }
+  100% { transform: translateY(-50%) rotate(-10deg); }
+}
+
+/* =========================
+   🌈 ARCOÍRIS (SUAVE Y PRO)
+========================= */
+.info-btn.rainbow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    red, orange, yellow, green, blue, violet, red
+  );
+  opacity: 0.2;
+  animation: rainbowSpin 3s linear infinite;
+}
+
+@keyframes rainbowSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

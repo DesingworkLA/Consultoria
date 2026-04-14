@@ -318,7 +318,7 @@ button {
 }
 
 .info-btn.bear::after {
-  content: "🧸";
+  content: "";
   position: absolute;
   right: 10px;
   top: 50%;
@@ -338,7 +338,7 @@ button {
 }
 
 .info-btn.ball::after {
-  content: "🔴";
+  content: "";
   position: absolute;
   font-size: 14px;
   animation: ballMove 2.5s linear infinite;

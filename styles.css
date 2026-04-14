@@ -327,3 +327,38 @@ button {
   animation: none;
   transform: translateY(-3px);
 }
+
+@keyframes floatUpDown {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-anim {
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+@keyframes softRotate {
+  0%   { transform: rotate(-1deg); }
+  50%  { transform: rotate(1deg); }
+  100% { transform: rotate(-1deg); }
+}
+
+.rotate-anim {
+  animation: softRotate 4s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse-anim {
+  animation: softPulse 2.8s ease-in-out infinite;
+}
+
+.info-btn:hover {
+  animation: none !important;
+  transform: translateY(-3px);
+}

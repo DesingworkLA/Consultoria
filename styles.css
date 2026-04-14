@@ -264,18 +264,18 @@ button {
 
 .footer .buttons a:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow:
-    6px 6px 15px rgba(0,0,0,0.2),
-    -6px -6px 15px rgba(255,255,255,0.9);
   filter: brightness(1.1);
 }
 
 /* =========================
-   INFO BUTTON
+   INFO BUTTON (BASE LIMPIO)
 ========================= */
 .info-btn {
-  display: inline-block;
-  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 10px 14px;
   border-radius: 10px;
   background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
@@ -292,159 +292,59 @@ button {
 }
 
 /* =========================
-   ANIMACIONES INDIVIDUALES
+   🧠 ANIMACIÓN ARCOÍRIS
 ========================= */
-
-/* Terapia */
-.float-anim {
-  animation: floatUpDown 3s ease-in-out infinite;
-}
-
-/* Familiar */
-.rotate-anim {
-  animation: softRotate 4s ease-in-out infinite;
-}
-
-/* Adolescente */
-.pulse-anim {
-  animation: softPulse 2.8s ease-in-out infinite;
-}
-
-/* KEYFRAMES */
-@keyframes floatUpDown {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-4px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes softRotate {
-  0% { transform: rotate(-1deg); }
-  50% { transform: rotate(1deg); }
-  100% { transform: rotate(-1deg); }
-}
-
-@keyframes softPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-/* STOP ANIMATION ON HOVER */
-.info-btn:hover {
-  animation: none !important;
-}
-
-.ani {
-  display: inline-block;
-  margin: 0 6px;
-}
-
-@keyframes rainbowGlow {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(180deg); }
-  100% { filter: hue-rotate(360deg); }
-}
-
-.rainbow {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
-  animation: rainbowGlow 3s linear infinite;
-}
-
-@keyframes bearMove {
-  0% { transform: rotate(-10deg); }
-  50% { transform: rotate(10deg); }
-  100% { transform: rotate(-10deg); }
-}
-
-.bear {
-  width: 12px;
-  height: 12px;
-  background: #8b5a2b;
-  border-radius: 50%;
-  animation: bearMove 2s ease-in-out infinite;
-}
-
-@keyframes ballRoll {
-  0% { transform: translateX(0px) rotate(0deg); }
-  50% { transform: translateX(6px) rotate(180deg); }
-  100% { transform: translateX(0px) rotate(360deg); }
-}
-
-.ball {
-  width: 10px;
-  height: 10px;
-  background: red;
-  border-radius: 50%;
-  animation: ballRoll 1.8s linear infinite;
-}
-
-.info-btn {
-  position: relative;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-}
-
-@keyframes breathe {
-  0% { box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
-  50% { box-shadow: 2px 2px 14px rgba(0,0,0,0.18); }
-  100% { box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
-}
-
-.info-btn {
-  animation: breathe 3s ease-in-out infinite;
-}
-
-@keyframes rainbowMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+@keyframes rainbowLoop {
+  0% { transform: scale(0.2); opacity: 0; }
+  30% { transform: scale(1); opacity: 1; }
+  60% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.2); opacity: 0; }
 }
 
 .info-btn.rainbow::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(270deg, red, orange, yellow, green, blue, violet);
-  background-size: 400% 400%;
-  opacity: 0.25;
-  animation: rainbowMove 4s linear infinite;
-  z-index: 0;
+  top: 6px;
+  left: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: conic-gradient(red, orange, yellow, green, blue, violet, red);
+  animation: rainbowLoop 2.8s ease-in-out infinite;
 }
 
-@keyframes bearBreath {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+/* =========================
+   🧸 OSO MOVIENDO CABEZA
+========================= */
+@keyframes bearHead {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
 }
 
 .info-btn.bear::after {
   content: "🧸";
   position: absolute;
   right: 10px;
-  animation: bearBreath 2.5s ease-in-out infinite;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: bearHead 1.8s ease-in-out infinite;
 }
 
-@keyframes ballFloat {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-3px); }
-  100% { transform: translateY(0px); }
+/* =========================
+   🔴 PELOTA EN MOVIMIENTO
+========================= */
+@keyframes ballMove {
+  0% { left: 10px; top: 50%; transform: translateY(-50%); }
+  25% { left: 40%; top: 20%; }
+  50% { left: 80%; top: 50%; }
+  75% { left: 40%; top: 80%; }
+  100% { left: 10px; top: 50%; }
 }
 
 .info-btn.ball::after {
   content: "🔴";
   position: absolute;
-  right: 10px;
-  animation: ballFloat 1.8s ease-in-out infinite;
+  font-size: 14px;
+  animation: ballMove 2.5s linear infinite;
 }

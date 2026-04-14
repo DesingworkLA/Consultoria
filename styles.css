@@ -351,19 +351,12 @@ button {
   z-index: 2;
 }
 
-@keyframes bearTilt {
-  0% { transform: translateY(-50%) rotate(-15deg); }
-  50% { transform: translateY(-50%) rotate(15deg); }
-  100% { transform: translateY(-50%) rotate(-15deg); }
+.info-btn.bear {
+  overflow: hidden;
 }
 /* =========================
    PELOTA
 ========================= */
-.info-btn.ball {
-  position: relative;
-  overflow: hidden;
-}
-
 .info-btn.ball::before {
   content: "";
   position: absolute;
@@ -374,14 +367,14 @@ button {
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  animation: ballOrbit 2.2s ease-in-out infinite;
+  animation: ballOrbit 2.2s linear infinite;
   z-index: 2;
 }
 
 @keyframes ballOrbit {
-  0%   { transform: translate(0px, -50%); }
-  25%  { transform: translate(40px, -18px); }
-  50%  { transform: translate(80px, -50%); }
-  75%  { transform: translate(40px, 18px); }
-  100% { transform: translate(0px, -50%); }
+  0%   { left: 10px; top: 50%; transform: translateY(-50%); }
+  25%  { left: 40%; top: 30%; }
+  50%  { left: 80%; top: 50%; }
+  75%  { left: 40%; top: 70%; }
+  100% { left: 10px; top: 50%; }
 }

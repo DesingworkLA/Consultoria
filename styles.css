@@ -271,3 +271,42 @@ button {
   transform: translateY(-3px);
   filter: brightness(1.1);
 }
+
+.section .card,
+.section .image-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-card {
+  position: relative;
+}
+
+.image-card .info-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(255,255,255,0.9);
+}
+
+.section {
+  align-items: stretch;
+}
+
+.card, .image-card {
+  height: 100%;
+}
+
+.card, .image-card {
+  transition: all 0.3s ease;
+}
+
+.card:hover, .image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 18px rgba(0,0,0,0.15);
+}
+
+.section {
+  gap: 25px;
+  margin-top: 70px;
+}

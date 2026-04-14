@@ -287,31 +287,63 @@ button {
   overflow: hidden;
 }
 
-/* pelota en la parte inferior */
-.info-btn.ball::before {
+/* base de pelotas */
+.info-btn.ball::before,
+.info-btn.ball::after {
   content: "";
   position: absolute;
-  bottom: 4px; /* 👈 ABAJO del texto */
-  left: -15px;
+  bottom: 4px;
   width: 8px;
   height: 8px;
-  background: #ff3b3b;
   border-radius: 50%;
   z-index: 0;
   opacity: 0.9;
-  animation: ballBottomMove 2.4s linear infinite;
 }
 
-/* movimiento horizontal limpio abajo */
-@keyframes ballBottomMove {
-  0% {
-    left: -15px;
-  }
-  100% {
-    left: 110%;
-  }
+/* 🔴 pelota roja */
+.info-btn.ball::before {
+  background: #ff3b3b;
+  left: -20px;
+  animation: ballMove1 2.4s linear infinite;
 }
 
+/* 🔵 pelota azul */
+.info-btn.ball::after {
+  background: #2f7bff;
+  left: -40px;
+  animation: ballMove2 2.4s linear infinite;
+  animation-delay: 0.6s;
+}
+
+/* 🟡 tercera pelota (usamos shadow hack) */
+.info-btn.ball {
+  box-shadow: none;
+}
+
+.info-btn.ball span {
+  position: relative;
+  z-index: 2;
+}
+
+/* 🟡 pelota amarilla (extra capa con gradient trick) */
+.info-btn.ball {
+  background-image:
+    radial-gradient(circle at -10px 90%, #ffd400 8px, transparent 9px),
+    linear-gradient(145deg, #e0e0e0, #cfcfcf);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* animaciones */
+@keyframes ballMove1 {
+  0% { left: -20px; }
+  100% { left: 110%; }
+}
+
+@keyframes ballMove2 {
+  0% { left: -40px; }
+  100% { left: 130%; }
+}
 /* =========================
    🧸 BOTÓN 2: OSO MICRO MOVIMIENTO
 ========================= */

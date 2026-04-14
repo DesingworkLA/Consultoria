@@ -351,41 +351,46 @@ button {
 
 .info-btn.bear {
   position: relative;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
+
+  /* 👇 clave: empuja el contenido hacia la izquierda */
+  justify-content: flex-start;
+
+  gap: 10px;
+  padding-left: 14px;
 }
 
-/* contenedor del icono */
+/* icono oso real a la izquierda */
 .bear-icon {
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* oso */
 .bear-icon::before {
   content: "🧸";
   font-size: 14px;
-  display: inline-block;
-  animation: bearBreath 4s ease-in-out infinite; /* 👈 lento */
-  transform-origin: center;
+
+  /* movimiento suave */
+  animation: bearSoftMove 4s ease-in-out infinite;
 }
 
-/* movimiento MUY suave */
-@keyframes bearBreath {
+/* movimiento MUY sutil */
+@keyframes bearSoftMove {
   0%   { transform: translateY(0px) rotate(-2deg); }
   50%  { transform: translateY(-1px) rotate(2deg); }
   100% { transform: translateY(0px) rotate(-2deg); }
 }
 
-/* texto alineado bien */
+/* texto bien alineado */
 .info-btn.bear span {
   position: relative;
+  z-index: 2;
 }
-
 /* =========================
    🌈 BOTÓN 3: ARCOÍRIS SUAVE INTERNO
 ========================= */

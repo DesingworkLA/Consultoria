@@ -6,14 +6,10 @@ html, body {
   min-height: 100vh;
 }
 
-/* =========================
-   FONDO PSICOLOGÍA ARREGLADO
-========================= */
 body {
   position: relative;
 }
 
-/* fondo visible y estable */
 body::before {
   content: "";
   position: fixed;
@@ -30,39 +26,28 @@ body::before {
   z-index: 0;
 }
 
-/* =========================
-   TODO EL CONTENIDO ENCIMA
-========================= */
 body * {
   position: relative;
   z-index: 1;
 }
 
-/* =========================
-   CONTAINER
-========================= */
 .container {
   max-width: 1000px;
   margin: auto;
   padding: 40px 20px;
 }
 
-/* =========================
-   HEADER
-========================= */
 .header {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding-left: 100px;
 }
 
 .subtitle {
   color: gray;
 }
 
-/* =========================
-   BOTONES
-========================= */
 .buttons a {
   text-decoration: none;
   padding: 8px 14px;
@@ -72,9 +57,6 @@ body * {
   color: black;
 }
 
-/* =========================
-   SECCIONES
-========================= */
 .section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,18 +64,12 @@ body * {
   margin-top: 60px;
 }
 
-/* =========================
-   CARDS
-========================= */
 .card {
   background: #f7f7f7;
   border-radius: 20px;
   padding: 30px;
 }
 
-/* =========================
-   IMÁGENES
-========================= */
 .image-card {
   border-radius: 20px;
   overflow: hidden;
@@ -106,9 +82,6 @@ body * {
   display: block;
 }
 
-/* =========================
-   FORMULARIO
-========================= */
 .form-section {
   margin-top: 60px;
   text-align: center;
@@ -128,9 +101,6 @@ input, textarea {
   border: 1px solid #ddd;
 }
 
-/* =========================
-   BOTÓN
-========================= */
 button {
   padding: 12px;
   border: none;
@@ -140,17 +110,11 @@ button {
   cursor: pointer;
 }
 
-/* =========================
-   TESTIMONIAL
-========================= */
 .testimonial {
   margin-top: 60px;
   font-size: 18px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 @media (max-width: 768px) {
   .section {
     grid-template-columns: 1fr;

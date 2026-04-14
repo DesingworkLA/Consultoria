@@ -380,3 +380,71 @@ button {
   border-radius: 50%;
   animation: ballRoll 1.8s linear infinite;
 }
+
+.info-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+@keyframes breathe {
+  0% { box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
+  50% { box-shadow: 2px 2px 14px rgba(0,0,0,0.18); }
+  100% { box-shadow: 2px 2px 8px rgba(0,0,0,0.1); }
+}
+
+.info-btn {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+@keyframes rainbowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.info-btn.rainbow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, violet);
+  background-size: 400% 400%;
+  opacity: 0.25;
+  animation: rainbowMove 4s linear infinite;
+  z-index: 0;
+}
+
+@keyframes bearBreath {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.info-btn.bear::after {
+  content: "🧸";
+  position: absolute;
+  right: 10px;
+  animation: bearBreath 2.5s ease-in-out infinite;
+}
+
+@keyframes ballFloat {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0px); }
+}
+
+.info-btn.ball::after {
+  content: "🔴";
+  position: absolute;
+  right: 10px;
+  animation: ballFloat 1.8s ease-in-out infinite;
+}

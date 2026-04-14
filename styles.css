@@ -39,8 +39,9 @@ body * {
 
 .header {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .subtitle {

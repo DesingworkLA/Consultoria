@@ -41,17 +41,16 @@ body * {
 }
 
 /* =========================
-   HEADER (ARREGLADO)
+   HEADER (ESTABLE, SIN ROMPER DISEÑO)
 ========================= */
 .header {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-left: 80px; /* espacio para el logo */
 }
 
 /* =========================
-   LOGO (ARREGLADO LIMPIO)
+   LOGO (ARREGLADO DEFINITIVO)
 ========================= */
 .logo {
   position: absolute;

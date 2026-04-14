@@ -41,7 +41,6 @@ body * {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  position: relative;
 }
 
 .subtitle {
@@ -124,8 +123,8 @@ button {
 .logo {
   position: absolute;
   top: 20px;
-  left: 40px;
-  z-index: 10;
+  left: 20px;
+  z-index: 999;
 }
 
 .logo img {

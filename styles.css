@@ -197,3 +197,16 @@ button {
   margin: 5px 0;
   font-size: 14px;
 }
+
+.footer {
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* 👈 centra horizontal */
+}
+
+.footer .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

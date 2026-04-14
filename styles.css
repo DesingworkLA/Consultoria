@@ -253,3 +253,21 @@ button {
 
   filter: brightness(1.1);
 }
+
+.info-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.info-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}

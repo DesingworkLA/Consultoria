@@ -87,7 +87,7 @@ body * {
 }
 
 /* =========================
-   SECCIONES (ARREGLADO)
+   SECCIONES
 ========================= */
 .section {
   display: flex;
@@ -100,9 +100,9 @@ body * {
    CARDS
 ========================= */
 .card {
-  background: #f7f7f7;
+  background: transparent; /* 🔥 ahora se integra con la tarjeta */
   border-radius: 20px;
-  padding: 30px;
+  padding: 10px;
   height: 100%;
 }
 
@@ -119,17 +119,11 @@ body * {
 }
 
 /* =========================
-   HOVER GENERAL
+   HOVER GENERAL (QUITADO EL EFECTO RARO)
 ========================= */
 .card,
 .image-card {
-  transition: all 0.3s ease;
-}
-
-.card:hover,
-.image-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 6px 6px 18px rgba(0,0,0,0.15);
+  transition: none; /* 🔥 eliminamos animación rara */
 }
 
 /* =========================
@@ -246,7 +240,7 @@ button {
 }
 
 /* =========================
-   INFO BUTTON BASE PRO
+   INFO BUTTON
 ========================= */
 .info-btn {
   position: relative;
@@ -270,7 +264,7 @@ button {
 }
 
 /* =========================
-   SERVICE (CLAVE)
+   SERVICE (TARJETA COMPLETA)
 ========================= */
 .service {
   display: grid;
@@ -278,6 +272,17 @@ button {
   gap: 25px;
   align-items: center;
   margin-bottom: 40px;
+
+  background: #f7f7f7; /* 🔥 ahora todo es una sola tarjeta */
+  border-radius: 20px;
+  padding: 20px;
+
+  transition: 0.25s ease;
+}
+
+.service:hover {
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 18px rgba(0,0,0,0.12);
 }
 
 .service.reverse {
@@ -297,10 +302,4 @@ button {
   .service.reverse {
     direction: ltr;
   }
-}
-
-.service {
-  background: #f7f7f7;
-  border-radius: 20px;
-  padding: 20px;
 }

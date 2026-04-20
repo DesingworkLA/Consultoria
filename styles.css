@@ -298,3 +298,9 @@ button {
     direction: ltr;
   }
 }
+
+.service {
+  background: #f7f7f7;
+  border-radius: 20px;
+  padding: 20px;
+}

@@ -469,3 +469,111 @@ button {
     left: 110%;
   }
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 30px 15px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .section {
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .header {
+    padding-top: 60px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    top: 10px;
+    left: 10px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .info-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  form {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .profile-image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .footer .buttons a {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+}
+
+.section {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}

@@ -87,14 +87,13 @@ body * {
 }
 
 /* =========================
-   SECCIONES
+   SECCIONES (ARREGLADO)
 ========================= */
 .section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   margin-top: 70px;
-  align-items: stretch;
 }
 
 /* =========================
@@ -170,15 +169,6 @@ button {
 .testimonial {
   margin-top: 60px;
   font-size: 18px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .section {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* =========================
@@ -280,304 +270,8 @@ button {
 }
 
 /* =========================
-   🔴 BOTÓN 1: PELOTA FLUIDA
+   SERVICE (CLAVE)
 ========================= */
-.info-btn.ball {
-  position: relative;
-  overflow: hidden;
-}
-
-/* base de pelotas */
-.info-btn.ball::before,
-.info-btn.ball::after {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  z-index: 0;
-  opacity: 0.9;
-}
-
-/* 🔴 pelota roja */
-.info-btn.ball::before {
-  background: #ff3b3b;
-  left: -20px;
-  animation: ballMove1 2.4s linear infinite;
-}
-
-/* 🔵 pelota azul */
-.info-btn.ball::after {
-  background: #2f7bff;
-  left: -40px;
-  animation: ballMove2 2.4s linear infinite;
-  animation-delay: 0.6s;
-}
-
-/* 🟡 tercera pelota (usamos shadow hack) */
-.info-btn.ball {
-  box-shadow: none;
-}
-
-.info-btn.ball span {
-  position: relative;
-  z-index: 2;
-}
-
-/* 🟡 pelota amarilla (extra capa con gradient trick) */
-.info-btn.ball {
-  background-image:
-    radial-gradient(circle at -10px 90%, #ffd400 8px, transparent 9px),
-    linear-gradient(145deg, #e0e0e0, #cfcfcf);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-/* animaciones */
-@keyframes ballMove1 {
-  0% { left: -20px; }
-  100% { left: 110%; }
-}
-
-@keyframes ballMove2 {
-  0% { left: -40px; }
-  100% { left: 130%; }
-}
-
-/* =========================
-   🧸 OSO 
-========================= */
-
-.info-btn.bear {
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  /* 👇 clave: empuja el contenido hacia la izquierda */
-  justify-content: flex-start;
-
-  gap: 10px;
-  padding-left: 14px;
-}
-
-/* icono oso real a la izquierda */
-.bear-icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bear-icon::before {
-  content: "🧸";
-  font-size: 14px;
-
-  /* movimiento suave */
-  animation: bearSoftMove 4s ease-in-out infinite;
-}
-
-/* movimiento MUY sutil */
-@keyframes bearSoftMove {
-  0%   { transform: translateY(0px) rotate(-2deg); }
-  50%  { transform: translateY(-1px) rotate(2deg); }
-  100% { transform: translateY(0px) rotate(-2deg); }
-}
-
-/* texto bien alineado */
-.info-btn.bear span {
-  position: relative;
-  z-index: 2;
-}
-/* =========================
-   🌈 BOTÓN 3: ARCOÍRIS SUAVE INTERNO
-========================= */
-.info-btn.rainbow::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 30%,
-    rgba(255,0,0,0.25),
-    rgba(255,165,0,0.2),
-    rgba(0,255,0,0.15),
-    rgba(0,0,255,0.15),
-    transparent 70%
-  );
-  animation: rainbowPulse 3s ease-in-out infinite;
-}
-
-@keyframes rainbowPulse {
-  0%   { transform: scale(0.95); opacity: 0.4; }
-  50%  { transform: scale(1.05); opacity: 0.7; }
-  100% { transform: scale(0.95); opacity: 0.4; }
-}
-
-/* =========================
-   CONTENEDOR DE PELOTAS
-========================= */
-.info-btn.ball {
-  position: relative;
-  overflow: hidden;
-}
-
-.info-btn.ball span {
-  position: relative;
-  z-index: 2;
-}
-
-/* zona inferior de animación */
-.ball-container {
-  position: absolute;
-  bottom: 4px;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  pointer-events: none;
-}
-
-/* pelotas base */
-.ball-item {
-  position: absolute;
-  bottom: 0;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: red;
-  opacity: 0.9;
-  animation: moveBall 2.5s linear infinite;
-}
-
-/* retrasos para que no vayan juntas */
-.ball-item:nth-child(2) {
-  animation-delay: 0.8s;
-  background: #2f7bff;
-}
-
-.ball-item:nth-child(3) {
-  animation-delay: 1.6s;
-  background: #ffd400;
-}
-
-/* movimiento horizontal limpio */
-@keyframes moveBall {
-  0% {
-    left: -10px;
-  }
-  100% {
-    left: 110%;
-  }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-}
-
-h3 {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-}
-
-p {
-  font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-@media (max-width: 1024px) {
-
-  .container {
-    padding: 30px 15px;
-  }
-
-  .profile-box {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-image {
-    width: 180px;
-    height: 180px;
-  }
-
-  .section {
-    gap: 20px;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .header {
-    padding-top: 60px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo {
-    top: 10px;
-    left: 10px;
-  }
-
-  .profile-box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-image {
-    width: 150px;
-    height: 150px;
-  }
-
-  .section {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 20px;
-  }
-
-  .info-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
-  form {
-    width: 100%;
-  }
-
-}
-
-@media (max-width: 480px) {
-
-  .profile-image {
-    width: 130px;
-    height: 130px;
-  }
-
-  .container {
-    padding: 20px 10px;
-  }
-
-  .card {
-    padding: 18px;
-  }
-
-  .footer .buttons a {
-    width: 34px;
-    height: 34px;
-    font-size: 16px;
-  }
-
-}
-
-.section {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
 .service {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -586,7 +280,6 @@ p {
   margin-bottom: 40px;
 }
 
-/* alternar lados */
 .service.reverse {
   direction: rtl;
 }

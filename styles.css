@@ -75,7 +75,7 @@ body * {
 }
 
 /* =========================
-   BOTONES
+   BOTONES HEADER / FOOTER
 ========================= */
 .buttons a {
   text-decoration: none;
@@ -85,7 +85,6 @@ body * {
   margin-right: 10px;
   color: black;
 
-  /* 🔥 ANIMACIÓN AÑADIDA */
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
@@ -170,7 +169,6 @@ button {
   color: white;
   cursor: pointer;
 
-  /* 🔥 ANIMACIÓN RESTAURADA */
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
@@ -268,7 +266,7 @@ button:active {
 }
 
 /* =========================
-   INFO BUTTON
+   INFO BUTTON (FIX REAL)
 ========================= */
 .info-btn {
   position: relative;
@@ -283,12 +281,24 @@ button:active {
   overflow: hidden;
   background: linear-gradient(145deg, #e0e0e0, #cfcfcf);
   color: #333;
-  transition: 0.25s ease;
+
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 .info-btn:hover {
   transform: translateY(-3px);
   filter: brightness(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.info-btn:active {
+  transform: scale(0.96);
+}
+
+/* 🔥 evita conflictos con elementos internos */
+.info-btn * {
+  pointer-events: none;
 }
 
 /* =========================

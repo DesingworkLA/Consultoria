@@ -84,6 +84,20 @@ body * {
   background: #f0f0f0;
   margin-right: 10px;
   color: black;
+
+  /* 🔥 ANIMACIÓN AÑADIDA */
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.buttons a:active {
+  transform: scale(0.96);
 }
 
 /* =========================
@@ -100,7 +114,7 @@ body * {
    CARDS
 ========================= */
 .card {
-  background: transparent; /* 🔥 ahora se integra con la tarjeta */
+  background: transparent;
   border-radius: 20px;
   padding: 10px;
   height: 100%;
@@ -119,11 +133,11 @@ body * {
 }
 
 /* =========================
-   HOVER GENERAL (QUITADO EL EFECTO RARO)
+   HOVER GENERAL
 ========================= */
 .card,
 .image-card {
-  transition: none; /* 🔥 eliminamos animación rara */
+  transition: none;
 }
 
 /* =========================
@@ -155,6 +169,20 @@ button {
   background: black;
   color: white;
   cursor: pointer;
+
+  /* 🔥 ANIMACIÓN RESTAURADA */
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+button:active {
+  transform: scale(0.96);
 }
 
 /* =========================
@@ -264,7 +292,7 @@ button {
 }
 
 /* =========================
-   SERVICE (TARJETA COMPLETA)
+   SERVICE
 ========================= */
 .service {
   display: grid;
@@ -273,7 +301,7 @@ button {
   align-items: center;
   margin-bottom: 40px;
 
-  background: #f7f7f7; /* 🔥 ahora todo es una sola tarjeta */
+  background: #f7f7f7;
   border-radius: 20px;
   padding: 20px;
 

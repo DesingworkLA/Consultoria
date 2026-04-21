@@ -1,7 +1,3 @@
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Formulario enviado (demo)");
-});
 
 document.querySelectorAll(".info-btn").forEach(btn => {
   btn.addEventListener("click", function (e) {
@@ -19,14 +15,7 @@ document.querySelectorAll(".info-btn").forEach(btn => {
 });
 
 document.querySelectorAll(".ball-item").forEach((ball) => {
-  const colors = [
-    "#ff3b3b",
-    "#2f7bff",
-    "#ffd400",
-    "#00d084",
-    "#ff7b00",
-    "#b400ff"
-  ];
+  const colors = ["#ff3b3b","#2f7bff","#ffd400","#00d084","#ff7b00","#b400ff"];
 
   setInterval(() => {
     const random = colors[Math.floor(Math.random() * colors.length)];

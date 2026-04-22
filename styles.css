@@ -55,32 +55,36 @@ body * {
 }
 
 /* =========================
-   LOGO (CORREGIDO FINAL)
+   LOGO (CORREGIDO FINAL SIN HITBOX FANTASMA)
 ========================= */
 .logo {
   position: fixed;
-  top: 10px;
-
-  /* alineado con el contenido */
-  left: calc((100% - 1000px) / 2);
-
+  top: 15px;
+  left: calc(50% - 500px); /* alineado con container (1000px / 2) */
   z-index: 999;
-}
 
-/* el click SOLO ocupa el contenido */
-.logo a {
+  width: auto;
+  height: auto;
+
   display: inline-block;
-  width: fit-content;
-  height: fit-content;
-  cursor: pointer;
+
+  pointer-events: none; /* evita hitbox gigante */
 }
 
-/* imagen */
 .logo img {
   height: 300px;
   width: auto;
   display: block;
   object-fit: contain;
+
+  pointer-events: auto; /* SOLO la imagen es clickeable */
+  cursor: pointer;
+}
+
+/* seguridad extra anti-hitbox fantasma */
+.logo,
+.logo * {
+  display: inline-block;
 }
 
 /* =========================

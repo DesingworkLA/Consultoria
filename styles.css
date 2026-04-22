@@ -60,14 +60,13 @@ body * {
 .logo {
   position: fixed;
   top: 10px;
-  left: 0;
-  right: 0;
 
+  /* 👇 MISMO ANCHO QUE TU CONTENEDOR */
+  width: 100%;
   display: flex;
-  justify-content: center; /* 👈 lo alinea con el contenido */
+  justify-content: center;
   z-index: 999;
-
-  pointer-events: none; /* 👈 elimina hitbox fantasma */
+  pointer-events: none;
 }
 
 .logo a {
@@ -79,8 +78,8 @@ body * {
   width: auto;
   display: block;
   object-fit: contain;
-
-  pointer-events: auto; /* 👈 solo la imagen es clickeable */
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 /* =========================

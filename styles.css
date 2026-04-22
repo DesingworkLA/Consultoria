@@ -59,14 +59,19 @@ body * {
 ========================= */
 .logo {
   position: fixed;
-  top: 10px;       /* 🔥 más arriba */
-  left: 40px;      /* 🔥 menos pegado al borde (más profesional) */
+  top: 10px;
+
+  /* 🔥 lo alinea con el centro del contenido, no del viewport */
+  left: 50%;
+  transform: translateX(-500px); 
+  /* 500px = mitad de tu container (1000px / 2) */
 
   z-index: 999;
 
   display: inline-flex;
   width: fit-content;
   height: fit-content;
+
   padding: 0;
   margin: 0;
 }
@@ -81,8 +86,8 @@ body * {
   display: block;
   object-fit: contain;
 
-  /* 👇 elimina área invisible clickeable extra */
-  pointer-events: auto;
+  /* 🔥 esto elimina clicks “fantasma” fuera de la imagen */
+  pointer-events: none;
 }
 
 /* =========================

@@ -140,7 +140,7 @@ body * {
 }
 
 /* =========================
-   FORMULARIO (NO BORRO NADA COMO PEDISTE)
+   FORMULARIO
 ========================= */
 .form-section {
   margin-top: 60px;
@@ -266,13 +266,15 @@ button:active {
 }
 
 /* =========================
-   INFO BUTTON
+   INFO BUTTON (LIMPIO + FLECHA)
 ========================= */
 .info-btn {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 10px;
+
   padding: 12px 14px;
   border-radius: 10px;
   text-decoration: none;
@@ -300,8 +302,20 @@ button:active {
   pointer-events: none;
 }
 
+/* FLECHA */
+.info-btn .arrow {
+  font-size: 16px;
+  opacity: 0.7;
+  transition: all 0.25s ease;
+}
+
+.info-btn:hover .arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
 /* =========================
-   RIPPLE
+   RIPPLE (se mantiene)
 ========================= */
 .ripple {
   position: absolute;
@@ -360,128 +374,4 @@ button:active {
   .service.reverse {
     direction: ltr;
   }
-}
-
-/* =========================
-   🔥 NUEVO: ANIMACIONES
-========================= */
-
-/* PAYASO */
-.clown-icon {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 2px solid #ff4d4d;
-  margin-right: 8px;
-  position: relative;
-  animation: clown-idle 2.5s ease-in-out infinite;
-}
-
-/* nariz */
-.clown-icon::before {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #ff4d4d;
-  border-radius: 50%;
-  top: 6px;
-  left: 6px;
-}
-
-/* ojos */
-.clown-icon::after {
-  content: "";
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: #333;
-  border-radius: 50%;
-  top: 5px;
-  left: 4px;
-  box-shadow: 7px 0 #333;
-}
-
-/* movimiento sutil */
-@keyframes clown-idle {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-1.5px); }
-}
-
-/* OSO */
-.bear-icon {
-  width: 18px;
-  height: 18px;
-  background: #6b4f3a;
-  border-radius: 50%;
-  margin-right: 8px;
-  position: relative;
-  animation: bear-idle 2.8s ease-in-out infinite;
-}
-
-/* orejas */
-.bear-icon::before,
-.bear-icon::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #6b4f3a;
-  border-radius: 50%;
-  top: -2px;
-}
-
-.bear-icon::before { left: 1px; }
-.bear-icon::after { right: 1px; }
-
-/* ojos */
-.bear-icon span {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: #222;
-  border-radius: 50%;
-  top: 7px;
-  left: 5px;
-  box-shadow: 6px 0 #222;
-  animation: bear-blink 4s infinite;
-}
-
-/* nariz */
-.bear-icon::marker {
-  display: none;
-}
-
-@keyframes bear-idle {
-  0%,100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-1px) scale(1.03); }
-}
-
-@keyframes bear-blink {
-  0%, 95%, 100% { transform: scaleY(1); }
-  97% { transform: scaleY(0.1); }
-}
-
-/* BOLAS */
-.ball-container {
-  display: flex;
-  gap: 5px;
-  margin-left: 8px;
-}
-
-.ball-item {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: red;
-  animation: ball-float 1.5s ease-in-out infinite;
-}
-
-.ball-item:nth-child(2) { animation-delay: 0.2s; }
-.ball-item:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes ball-float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
 }

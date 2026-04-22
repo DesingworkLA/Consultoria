@@ -59,17 +59,17 @@ body * {
    LOGO (CORREGIDO)
 ========================= */
 .logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  position: fixed;
+  top: 30px;      /* lo baja un poquito para que no choque */
+  left: 30px;     /* lo separa del borde */
   z-index: 999;
-  transform: translateX(-5px);
+  display: flex;
+  align-items: flex-start;
 }
 
 .logo img {
   height: 300px;
   width: auto;
-  cursor: pointer;
   display: block;
   object-fit: contain;
 }

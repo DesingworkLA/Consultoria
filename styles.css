@@ -371,59 +371,96 @@ button:active {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: radial-gradient(circle, #fff 40%, #ff4d4d);
+  background: #ffffff;
+  border: 2px solid #ff4d4d;
   margin-right: 8px;
   position: relative;
-  animation: clown-float 2.5s ease-in-out infinite;
+  animation: clown-idle 2.5s ease-in-out infinite;
 }
 
-.clown-icon::before,
+/* nariz */
+.clown-icon::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ff4d4d;
+  border-radius: 50%;
+  top: 6px;
+  left: 6px;
+}
+
+/* ojos */
 .clown-icon::after {
   content: "";
   position: absolute;
-  width: 4px;
-  height: 4px;
+  width: 3px;
+  height: 3px;
   background: #333;
   border-radius: 50%;
-  top: 6px;
+  top: 5px;
+  left: 4px;
+  box-shadow: 7px 0 #333;
 }
 
-.clown-icon::before { left: 4px; }
-.clown-icon::after { right: 4px; }
-
-@keyframes clown-float {
+/* movimiento sutil */
+@keyframes clown-idle {
   0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
+  50% { transform: translateY(-1.5px); }
 }
 
 /* OSO */
 .bear-icon {
   width: 18px;
   height: 18px;
-  background: #8b5e3c;
+  background: #6b4f3a;
   border-radius: 50%;
   margin-right: 8px;
   position: relative;
-  animation: bear-breathe 3s ease-in-out infinite;
+  animation: bear-idle 2.8s ease-in-out infinite;
 }
 
+/* orejas */
 .bear-icon::before,
 .bear-icon::after {
   content: "";
   position: absolute;
   width: 6px;
   height: 6px;
-  background: #8b5e3c;
+  background: #6b4f3a;
   border-radius: 50%;
   top: -2px;
 }
 
-.bear-icon::before { left: -2px; }
-.bear-icon::after { right: -2px; }
+.bear-icon::before { left: 1px; }
+.bear-icon::after { right: 1px; }
 
-@keyframes bear-breathe {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+/* ojos */
+.bear-icon span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #222;
+  border-radius: 50%;
+  top: 7px;
+  left: 5px;
+  box-shadow: 6px 0 #222;
+  animation: bear-blink 4s infinite;
+}
+
+/* nariz */
+.bear-icon::marker {
+  display: none;
+}
+
+@keyframes bear-idle {
+  0%,100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1px) scale(1.03); }
+}
+
+@keyframes bear-blink {
+  0%, 95%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.1); }
 }
 
 /* BOLAS */

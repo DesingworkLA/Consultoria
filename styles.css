@@ -375,3 +375,7 @@ button:active {
     direction: ltr;
   }
 }
+
+.info-btn {
+  flex-direction: row-reverse;
+}

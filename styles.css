@@ -59,16 +59,14 @@ body * {
 ========================= */
 .logo {
   position: fixed;
-  top: 20px;
-  left: 20px; /* 👈 vuelve a esquina real profesional */
+  top: 10px;       /* 🔥 más arriba */
+  left: 40px;      /* 🔥 menos pegado al borde (más profesional) */
 
   z-index: 999;
 
-  /* 👇 esto arregla el “hitbox gigante” */
   display: inline-flex;
   width: fit-content;
   height: fit-content;
-
   padding: 0;
   margin: 0;
 }

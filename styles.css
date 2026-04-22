@@ -47,16 +47,15 @@ body * {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
-/* =========================
-   LOGO (ARREGLADO)
-========================= */
 .logo {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
+  z-index: 10;
+}
 
   /* 👇 esto es lo que lo corrige visualmente */
   display: flex;

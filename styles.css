@@ -7,11 +7,11 @@ html, body {
 }
 
 /* =========================
-   BODY (ESPACIO PARA LOGO FIXED)
+   BODY
 ========================= */
 body {
   position: relative;
-  padding-top: 140px; /* 🔥 evita choque con el logo */
+  padding-top: 40px; /* 👈 reducido para evitar choque visual */
 }
 
 body::before {
@@ -48,23 +48,24 @@ body * {
    HEADER
 ========================= */
 .header {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 140px;
+  padding-top: 20px; /* 👈 reducido (antes estaba causando choque) */
 }
 
 /* =========================
-   LOGO (CORREGIDO)
+   LOGO (ARREGLADO FINAL)
 ========================= */
 .logo {
   position: fixed;
-  top: 30px;      /* lo baja un poquito para que no choque */
-  left: 30px;     /* lo separa del borde */
+  top: 25px;
+  left: 60px; /* 👈 mejor alineación visual (ni pegado ni centrado raro) */
   z-index: 999;
-  display: flex;
-  align-items: flex-start;
+
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
 }
 
 .logo img {
@@ -136,14 +137,6 @@ body * {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* =========================
-   HOVER GENERAL
-========================= */
-.card,
-.image-card {
-  transition: none;
 }
 
 /* =========================
@@ -319,27 +312,6 @@ button:active {
 .info-btn:hover .arrow {
   transform: translateX(4px);
   opacity: 1;
-}
-
-/* =========================
-   RIPPLE
-========================= */
-.ripple {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: rgba(0,0,0,0.2);
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple-animation 0.6s ease-out;
-  pointer-events: none;
-}
-
-@keyframes ripple-animation {
-  to {
-    transform: scale(15);
-    opacity: 0;
-  }
 }
 
 /* =========================

@@ -11,7 +11,7 @@ html, body {
 ========================= */
 body {
   position: relative;
-  padding-top: 0; /* 🔥 importante: evitar empujar todo */
+  padding-top: 120px; /* espacio real para el logo */
 }
 
 body::before {
@@ -51,17 +51,26 @@ body * {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 20px; /* 🔥 reducido para evitar choque */
+  padding-top: 20px; /* 👈 menos espacio, evita choque con logo */
 }
 
 /* =========================
-   LOGO (AJUSTE MINIMO)
+   LOGO (CORREGIDO FINAL)
 ========================= */
 .logo {
   position: fixed;
-  top: 25px;
-  left: 40px; /* 👈 ajuste correcto (ni pegado ni exagerado) */
+  top: 20px;
+
+  /* 👇 esto lo centra con la página en vez de pegarlo al borde */
+  left: 50%;
+  transform: translateX(-50%);
+
   z-index: 999;
+
+  /* 👇 reduce hitbox innecesario */
+  display: inline-block;
+  width: fit-content;
+  height: auto;
 }
 
 .logo img {
@@ -69,6 +78,9 @@ body * {
   width: auto;
   display: block;
   object-fit: contain;
+
+  /* 👇 evita área invisible gigante */
+  pointer-events: auto;
 }
 
 /* =========================
@@ -133,14 +145,6 @@ body * {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* =========================
-   HOVER GENERAL
-========================= */
-.card,
-.image-card {
-  transition: none;
 }
 
 /* =========================
@@ -316,27 +320,6 @@ button:active {
 .info-btn:hover .arrow {
   transform: translateX(4px);
   opacity: 1;
-}
-
-/* =========================
-   RIPPLE
-========================= */
-.ripple {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: rgba(0,0,0,0.2);
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple-animation 0.6s ease-out;
-  pointer-events: none;
-}
-
-@keyframes ripple-animation {
-  to {
-    transform: scale(15);
-    opacity: 0;
-  }
 }
 
 /* =========================

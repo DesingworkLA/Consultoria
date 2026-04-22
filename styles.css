@@ -7,11 +7,11 @@ html, body {
 }
 
 /* =========================
-   BODY
+   BODY (ESPACIO REAL PARA LOGO)
 ========================= */
 body {
   position: relative;
-  padding-top: 120px; /* espacio real para el logo */
+  padding-top: 180px; /* 🔥 espacio REAL arriba para el logo */
 }
 
 body::before {
@@ -51,26 +51,30 @@ body * {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding-top: 20px; /* 👈 menos espacio, evita choque con logo */
+  padding-top: 20px; /* 👈 pequeño, no empuja demasiado */
 }
 
 /* =========================
-   LOGO (CORREGIDO FINAL)
+   LOGO (CORRECTO FINAL)
 ========================= */
 .logo {
   position: fixed;
   top: 20px;
-
-  /* 👇 esto lo centra con la página en vez de pegarlo al borde */
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px; /* 👈 vuelve a esquina real profesional */
 
   z-index: 999;
 
-  /* 👇 reduce hitbox innecesario */
-  display: inline-block;
+  /* 👇 esto arregla el “hitbox gigante” */
+  display: inline-flex;
   width: fit-content;
-  height: auto;
+  height: fit-content;
+
+  padding: 0;
+  margin: 0;
+}
+
+.logo a {
+  display: inline-block;
 }
 
 .logo img {
@@ -79,7 +83,7 @@ body * {
   display: block;
   object-fit: contain;
 
-  /* 👇 evita área invisible gigante */
+  /* 👇 elimina área invisible clickeable extra */
   pointer-events: auto;
 }
 

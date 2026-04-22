@@ -51,20 +51,28 @@ body * {
 }
 
 /* =========================
-   LOGO
+   LOGO (ARREGLADO)
 ========================= */
 .logo {
   position: fixed;
   top: 20px;
-  left: 40px;
+  left: 20px;
+
+  /* 👇 esto es lo que lo corrige visualmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   z-index: 999;
 }
 
 .logo img {
   height: 300px;
   width: auto;
-  cursor: pointer;
   display: block;
+
+  /* 👇 evita “sensación de caído” visual */
+  object-fit: contain;
 }
 
 /* =========================
@@ -266,7 +274,7 @@ button:active {
 }
 
 /* =========================
-   INFO BUTTON (FLECHA IZQUIERDA)
+   INFO BUTTON
 ========================= */
 .info-btn {
   position: relative;
@@ -302,7 +310,6 @@ button:active {
   pointer-events: none;
 }
 
-/* FLECHA */
 .info-btn .arrow {
   font-size: 16px;
   opacity: 0.7;

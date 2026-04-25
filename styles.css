@@ -11,7 +11,7 @@ html, body {
 ========================= */
 body {
   position: relative;
-  padding-top: 120px; /* REDUCIDO: antes 180px */
+  padding-top: 120px;
 }
 
 body::before {
@@ -55,20 +55,20 @@ body * {
 }
 
 /* =========================
-   LOGO (FIX DEFINITIVO)
+   LOGO (ALINEADO CON EL CONTAINER)
 ========================= */
 .logo {
   position: fixed;
   top: 15px;
-  left: 20px; /* CAMBIO: antes calc(), ahora fijo */
+  left: max(20px, calc((100% - 1000px) / 2 + 20px));
   z-index: 999;
-  display: block; /* CAMBIO: antes inline-block */
-  width: auto; /* CAMBIO: antes fit-content */
+  display: block;
+  width: auto;
   height: auto;
 }
 
 .logo img {
-  height: 80px; /* CAMBIO: antes 300px, eso creaba el espacio gigante */
+  height: 80px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -92,6 +92,7 @@ body * {
   background: #f0f0f0;
   margin-right: 10px;
   color: black;
+
   transition: all 0.25s ease;
 }
 
@@ -263,21 +264,17 @@ button:active {
   direction: ltr;
 }
 
-/* =========================
-   RESPONSIVE LOGO
-========================= */
 @media (max-width: 768px) {
   body {
-    padding-top: 90px; /* Menos espacio en móvil */
+    padding-top: 90px;
   }
   
   .logo {
-    left: 15px;
     top: 10px;
   }
   
   .logo img {
-    height: 60px; /* Logo más pequeño en móvil */
+    height: 60px;
   }
 
   .service {

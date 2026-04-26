@@ -55,11 +55,8 @@ body > *:not(.logo) {
   padding-top: 20px;
 }
 
-/* =========================
-   LOGO (TOTALMENTE FIJO)
-========================= */
 .logo {
-  position: fixed;
+  position: absolute;
   top: 25px;
   left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 9999;

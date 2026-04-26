@@ -55,7 +55,7 @@ body * {
 }
 
 /* =========================
-   LOGO SIN ESPCIO INVISIBLE
+   LOGO (REVISIÓN VISUAL)
 ========================= */
 .logo {
   position: fixed;
@@ -69,6 +69,8 @@ body * {
   padding: 0;
   margin: 0;
   line-height: 0;
+
+  border: 2px solid red; /* CONTENEDOR */
 }
 
 .logo img {
@@ -77,6 +79,8 @@ body * {
   display: block;
   object-fit: contain;
   cursor: pointer;
+
+  border: 2px solid blue; /* IMAGEN REAL */
 }
 
 /* =========================
@@ -272,11 +276,11 @@ button:active {
   body {
     padding-top: 90px;
   }
-  
+
   .logo {
     top: 10px;
   }
-  
+
   .logo img {
     height: 60px;
   }

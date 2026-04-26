@@ -57,7 +57,7 @@ body > *:not(.logo) {
 
 .logo {
   position: absolute;
-  top: 60px;
+  top: 70px;
   left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 9999;
 
@@ -70,7 +70,7 @@ body > *:not(.logo) {
 }
 
 .logo img {
-  height: 30px;
+  height: 40px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -90,43 +90,65 @@ body > *:not(.logo) {
 .buttons a {
   text-decoration: none;
   padding: 8px 14px;
-  border-radius: 12px;
+  border-radius: 14px;
   margin-right: 10px;
   color: #111;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
+  /* EFECTO METAL FUERTE */
   background: linear-gradient(
     145deg,
-    #f8f8f8,
-    #dcdcdc,
-    #f5f5f5
+    #ffffff 0%,
+    #e8e8e8 18%,
+    #cfcfcf 35%,
+    #f9f9f9 50%,
+    #bdbdbd 65%,
+    #eeeeee 82%,
+    #ffffff 100%
   );
 
-  border: 1px solid rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.9);
 
   box-shadow:
-    inset 2px 2px 4px rgba(255,255,255,0.8),
-    inset -2px -2px 4px rgba(0,0,0,0.05),
-    0 6px 14px rgba(0,0,0,0.12);
+    inset 0 2px 4px rgba(255,255,255,0.9),
+    inset 0 -2px 4px rgba(0,0,0,0.08),
+    0 8px 18px rgba(0,0,0,0.15);
 
-  transition: all 0.25s ease;
+  transition: all 0.28s ease;
 }
 
+/* BRILLO AL PASAR */
 .buttons a:hover {
   transform: translateY(-4px);
+
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #fdfdfd 15%,
+    #d9d9d9 30%,
+    #ffffff 50%,
+    #c8c8c8 70%,
+    #f7f7f7 85%,
+    #ffffff 100%
+  );
+
   box-shadow:
-    inset 2px 2px 5px rgba(255,255,255,0.9),
-    inset -2px -2px 5px rgba(0,0,0,0.06),
-    0 12px 24px rgba(0,0,0,0.18);
+    inset 0 3px 6px rgba(255,255,255,1),
+    inset 0 -2px 5px rgba(0,0,0,0.06),
+    0 14px 28px rgba(0,0,0,0.18);
+
+  filter: brightness(1.05);
 }
 
+/* EFECTO AL TOCAR */
 .buttons a:active {
   transform: scale(0.96);
+
   box-shadow:
-    inset 2px 2px 6px rgba(0,0,0,0.08),
-    inset -2px -2px 6px rgba(255,255,255,0.7);
+    inset 0 3px 8px rgba(0,0,0,0.08),
+    inset 0 -2px 6px rgba(255,255,255,0.8);
 }
 
 /* =========================

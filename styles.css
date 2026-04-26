@@ -55,12 +55,12 @@ body * {
 }
 
 /* =========================
-   LOGO (ALINEADO CON EL CONTAINER)
+   LOGO (FIJO Y MÁS A LA IZQUIERDA)
 ========================= */
 .logo {
   position: fixed;
   top: 15px;
-  left: max(20px, calc((100% - 1000px) / 2 + 20px));
+  left: 40px;
   z-index: 999;
   display: block;
   width: auto;

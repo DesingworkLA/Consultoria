@@ -72,7 +72,7 @@ body * {
 }
 
 .logo img {
-  height: 80px;
+  height: 40px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -96,17 +96,15 @@ body * {
   background: #f0f0f0;
   margin-right: 10px;
   color: black;
-
-  transition: all 0.25s ease;
 }
 
 .buttons a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transform: none;
+  box-shadow: none;
 }
 
 .buttons a:active {
-  transform: scale(0.96);
+  transform: none;
 }
 
 /* =========================

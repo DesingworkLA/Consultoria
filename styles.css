@@ -55,12 +55,12 @@ body * {
 }
 
 /* =========================
-   LOGO (FIJO Y MÁS A LA IZQUIERDA)
+   LOGO (AJUSTE SUAVE A LA IZQUIERDA)
 ========================= */
 .logo {
   position: fixed;
   top: 15px;
-  left: 40px;
+  left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 999;
   display: block;
   width: auto;

@@ -11,7 +11,7 @@ html, body {
 ========================= */
 body {
   position: relative;
-  padding-top: 120px;
+  padding-top: 90px;
 }
 
 body::before {
@@ -59,7 +59,7 @@ body * {
 ========================= */
 .logo {
   position: fixed;
-  top: 15px;
+  top: 35px;
   left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 999;
 
@@ -72,7 +72,7 @@ body * {
 }
 
 .logo img {
-  height: 20px;
+  height: 80px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -281,8 +281,8 @@ button:active {
 }
 
 .service:hover {
-  transform: translateY(-3px);
-  box-shadow: 6px 6px 18px rgba(0,0,0,0.12);
+  transform: none;
+  box-shadow: none;
 }
 
 .service.reverse {
@@ -296,11 +296,11 @@ button:active {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 90px;
+    padding-top: 80px;
   }
 
   .logo {
-    top: 10px;
+    top: 20px;
   }
 
   .logo img {

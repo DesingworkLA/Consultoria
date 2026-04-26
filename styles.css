@@ -94,15 +94,16 @@ body > *:not(.logo) {
   background: #f0f0f0;
   margin-right: 10px;
   color: black;
+  transition: all 0.25s ease;
 }
 
 .buttons a:hover {
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .buttons a:active {
-  transform: none;
+  transform: scale(0.96);
 }
 
 /* =========================

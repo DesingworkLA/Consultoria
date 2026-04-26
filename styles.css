@@ -55,7 +55,7 @@ body * {
 }
 
 /* =========================
-   LOGGO SIN ESPACIO INVISIBLE
+   LOGO SIN ESPCIO INVISIBLE
 ========================= */
 .logo {
   position: fixed;
@@ -64,11 +64,11 @@ body * {
   z-index: 999;
 
   display: inline-block;
-  width: fit-content;
-  height: fit-content;
-  line-height: 0;
+  width: auto;
+  height: auto;
   padding: 0;
   margin: 0;
+  line-height: 0;
 }
 
 .logo img {

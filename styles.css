@@ -57,7 +57,7 @@ body > *:not(.logo) {
 
 .logo {
   position: absolute;
-  top: 45px;
+  top: 60px;
   left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 9999;
 
@@ -90,20 +90,43 @@ body > *:not(.logo) {
 .buttons a {
   text-decoration: none;
   padding: 8px 14px;
-  border-radius: 8px;
-  background: #f0f0f0;
+  border-radius: 12px;
   margin-right: 10px;
-  color: black;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #f8f8f8,
+    #dcdcdc,
+    #f5f5f5
+  );
+
+  border: 1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    inset 2px 2px 4px rgba(255,255,255,0.8),
+    inset -2px -2px 4px rgba(0,0,0,0.05),
+    0 6px 14px rgba(0,0,0,0.12);
+
   transition: all 0.25s ease;
 }
 
 .buttons a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+  box-shadow:
+    inset 2px 2px 5px rgba(255,255,255,0.9),
+    inset -2px -2px 5px rgba(0,0,0,0.06),
+    0 12px 24px rgba(0,0,0,0.18);
 }
 
 .buttons a:active {
   transform: scale(0.96);
+  box-shadow:
+    inset 2px 2px 6px rgba(0,0,0,0.08),
+    inset -2px -2px 6px rgba(255,255,255,0.7);
 }
 
 /* =========================

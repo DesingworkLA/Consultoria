@@ -55,14 +55,13 @@ body * {
 }
 
 /* =========================
-   LOGO
+   LOGO (FIJO EN SCROLL)
 ========================= */
 .logo {
   position: fixed;
   top: 35px;
   left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 999;
-
   display: inline-block;
   width: auto;
   height: auto;
@@ -142,15 +141,47 @@ body * {
 /* =========================
    BOTONES INFORMACIÓN
 ========================= */
-.info-btn {
+
+/* BOTÓN 1 — Minimalista elegante */
+.service:nth-child(1) .info-btn {
   display: inline-block;
   text-decoration: none;
-  background: #f0f0f0;
+  background: #f2f2f2;
   color: black;
-  padding: 10px 18px;
-  border-radius: 10px;
+  padding: 11px 20px;
+  border-radius: 14px;
   margin-top: 15px;
   font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.25s ease;
+}
+
+/* BOTÓN 2 — Lujo moderno */
+.service:nth-child(2) .info-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: white;
+  color: black;
+  padding: 11px 20px;
+  border-radius: 14px;
+  margin-top: 15px;
+  font-weight: 500;
+  border: 1px solid #d8d8d8;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+}
+
+/* BOTÓN 3 — Cálido profesional */
+.service:nth-child(3) .info-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #f4f1eb;
+  color: black;
+  padding: 11px 20px;
+  border-radius: 14px;
+  margin-top: 15px;
+  font-weight: 500;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.05);
   transition: all 0.25s ease;
 }
 
@@ -160,7 +191,6 @@ body * {
 
 .info-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 .info-btn:active {

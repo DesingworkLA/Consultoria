@@ -55,16 +55,20 @@ body * {
 }
 
 /* =========================
-   LOGO (AJUSTE SUAVE A LA IZQUIERDA)
+   LOGGO SIN ESPACIO INVISIBLE
 ========================= */
 .logo {
   position: fixed;
   top: 15px;
-  left: max(20px, calc((100% - 1000px) / 2 + -1px));
+  left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 999;
-  display: block;
-  width: auto;
-  height: auto;
+
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .logo img {

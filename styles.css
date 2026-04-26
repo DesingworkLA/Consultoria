@@ -140,6 +140,34 @@ body * {
 }
 
 /* =========================
+   BOTONES INFORMACIÓN
+========================= */
+.info-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #f0f0f0;
+  color: black;
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.info-btn span {
+  color: black;
+}
+
+.info-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.info-btn:active {
+  transform: scale(0.97);
+}
+
+/* =========================
    FORMULARIO
 ========================= */
 .form-section {

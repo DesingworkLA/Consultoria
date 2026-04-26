@@ -60,7 +60,7 @@ body * {
 .logo {
   position: fixed;
   top: 15px;
-  left: max(20px, calc((100% - 1000px) / 2 + 5px));
+  left: max(20px, calc((100% - 1000px) / 2 + 2px));
   z-index: 999;
   display: block;
   width: auto;

@@ -57,7 +57,7 @@ body > *:not(.logo) {
 
 .logo {
   position: absolute;
-  top: 25px;
+  top: 45px;
   left: max(20px, calc((100% - 1000px) / 2 + 5px));
   z-index: 9999;
 

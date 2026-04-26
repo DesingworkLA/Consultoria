@@ -55,24 +55,20 @@ body * {
 }
 
 /* =========================
-   LOGO
+   LOGO (ALINEADO CON EL CONTAINER)
 ========================= */
 .logo {
   position: fixed;
   top: 15px;
-  left: max(20px, calc((100% - 1000px) / 2 + 5px));
+  left: max(20px, calc((100% - 1000px) / 2 + 20px));
   z-index: 999;
-
-  display: inline-block;
+  display: block;
   width: auto;
   height: auto;
-  padding: 0;
-  margin: 0;
-  line-height: 0;
 }
 
 .logo img {
-  height: 40px;
+  height: 150px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -96,15 +92,16 @@ body * {
   background: #f0f0f0;
   margin-right: 10px;
   color: black;
+  transition: all 0.25s ease;
 }
 
 .buttons a:hover {
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
 .buttons a:active {
-  transform: none;
+  transform: scale(0.96);
 }
 
 /* =========================
@@ -155,7 +152,8 @@ form {
   gap: 10px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;

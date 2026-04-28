@@ -65,7 +65,7 @@ body > *:not(.logo) {
   position: absolute;
   top: 70px;
   left: max(20px, calc((100% - 1100px) / 2 + 5px));
-  z-index: 9999;
+  z-index: 9998;
   display: inline-block;
   line-height: 0;
 }
@@ -76,6 +76,19 @@ body > *:not(.logo) {
   display: block;
   object-fit: contain;
   cursor: pointer;
+}
+
+/* =========================
+   SWITCH DARK MODE (CORREGIDO)
+========================= */
+
+.theme-switch-wrapper {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
 }
 
 /* =========================
@@ -252,10 +265,6 @@ body > *:not(.logo) {
   transform: translateY(-3px);
 }
 
-.info-btn span {
-  color: black;
-}
-
 /* =========================
    TESTIMONIAL
 ========================= */
@@ -293,51 +302,8 @@ body > *:not(.logo) {
 }
 
 /* =========================
-   BOTONES
+   SWITCH BASE (IMPORTANTE)
 ========================= */
-
-.buttons a {
-  text-decoration: none;
-  color: #111;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: linear-gradient(
-    145deg,
-    #ffffff 0%,
-    #e8e8e8 18%,
-    #cfcfcf 35%,
-    #f9f9f9 50%,
-    #bdbdbd 65%,
-    #eeeeee 82%,
-    #ffffff 100%
-  );
-
-  border: 1px solid rgba(255,255,255,0.9);
-
-  box-shadow:
-    inset 0 2px 4px rgba(255,255,255,0.9),
-    inset 0 -2px 4px rgba(0,0,0,0.08),
-    0 8px 18px rgba(0,0,0,0.15);
-
-  transition: all 0.28s ease;
-}
-
-.buttons a:hover {
-  transform: translateY(-4px);
-}
-
-/* =========================
-   SWITCH DARK MODE (NUEVO)
-========================= */
-
-.theme-switch-wrapper {
-  position: fixed;
-  top: 28px;
-  right: 28px;
-  z-index: 99999;
-}
 
 .theme-switch {
   position: relative;
@@ -360,7 +326,6 @@ body > *:not(.logo) {
   box-shadow: inset 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* círculo */
 .theme-switch .slider:before {
   position: absolute;
   content: "";
@@ -371,36 +336,14 @@ body > *:not(.logo) {
   background-color: white;
   border-radius: 50%;
   transition: 0.4s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* sol */
-.theme-switch .slider:after {
-  content: "\f185";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  left: 10px;
-  top: 7px;
-  font-size: 14px;
-  color: #f5c542;
-  transition: 0.4s;
-}
-
-/* activo */
 .theme-switch input:checked + .slider {
   background-color: #2b2b2b;
 }
 
 .theme-switch input:checked + .slider:before {
   transform: translateX(30px);
-}
-
-/* luna */
-.theme-switch input:checked + .slider:after {
-  content: "\f186";
-  left: 38px;
-  color: white;
 }
 
 /* =========================
@@ -421,42 +364,13 @@ body.dark-mode .profile-box.elegante {
   border: 1px solid rgba(255,255,255,0.06);
 }
 
-body.dark-mode .card p,
-body.dark-mode .profile-text p,
-body.dark-mode .intro-text p,
-body.dark-mode .testimonial,
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: #f1f1f1;
-}
-
-body.dark-mode .descripcion-profesional {
-  color: #d6d6d6;
-}
-
-body.dark-mode .info-btn {
-  background: #2a2a2a;
-  color: white;
-}
-
-body.dark-mode .info-btn span {
-  color: white;
-}
-
 /* =========================
-   TRANSICIONES
+   RESPONSIVE (SIN CAMBIOS IMPORTANTES)
 ========================= */
 
-body,
-.container,
-.service,
-.profile-box,
-.info-btn {
-  transition: all 0.35s ease;
+@media (max-width: 768px) {
+  .theme-switch-wrapper {
+    top: 14px;
+    right: 14px;
+  }
 }
-
-/* =========================
-   RESPONSIVE (se mantiene igual)
-========================= */
-
-/* (todo tu responsive se mantiene igual sin cambios) */

@@ -438,23 +438,47 @@ body.dark-mode .info-btn span {
 }
 
 /* =========================
-   EFECTO BOTONES REDES SOCIALES (HOVER GLOW)
+   BRILLO REAL BOTONES REDES SOCIALES
 ========================= */
 
 .footer .buttons a {
-  transition: all 0.3s ease;
   position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
+/* efecto hover real de brillo */
 .footer .buttons a:hover {
-  transform: translateY(-4px) scale(1.08);
+  transform: translateY(-4px) scale(1.1);
   box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.6),
-    0 0 20px rgba(255, 255, 255, 0.4),
-    0 8px 18px rgba(0,0,0,0.25);
+    0 0 8px rgba(255, 255, 255, 0.9),
+    0 0 16px rgba(255, 255, 255, 0.6),
+    0 0 28px rgba(255, 255, 255, 0.4),
+    0 10px 20px rgba(0,0,0,0.25);
 }
 
-/* efecto extra de brillo suave */
-.footer .buttons a:hover i {
-  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+/* brillo animado tipo “pasada de luz” */
+.footer .buttons a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.footer .buttons a:hover::before {
+  animation: shine 0.8s ease;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 200%; }
 }

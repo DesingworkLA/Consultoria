@@ -65,7 +65,7 @@ body > *:not(.logo) {
   position: absolute;
   top: 70px;
   left: max(20px, calc((100% - 1100px) / 2 + 5px));
-  z-index: 9998;
+  z-index: 9999;
   display: inline-block;
   line-height: 0;
 }
@@ -76,19 +76,6 @@ body > *:not(.logo) {
   display: block;
   object-fit: contain;
   cursor: pointer;
-}
-
-/* =========================
-   SWITCH DARK MODE (CORREGIDO)
-========================= */
-
-.theme-switch-wrapper {
-  position: fixed;
-  top: 18px;
-  right: 18px;
-  z-index: 99999;
-  display: flex;
-  align-items: center;
 }
 
 /* =========================
@@ -265,6 +252,10 @@ body > *:not(.logo) {
   transform: translateY(-3px);
 }
 
+.info-btn span {
+  color: black;
+}
+
 /* =========================
    TESTIMONIAL
 ========================= */
@@ -302,48 +293,97 @@ body > *:not(.logo) {
 }
 
 /* =========================
-   SWITCH BASE (IMPORTANTE)
+   BOTONES
 ========================= */
+
+.buttons a {
+  text-decoration: none;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #e8e8e8 18%,
+    #cfcfcf 35%,
+    #f9f9f9 50%,
+    #bdbdbd 65%,
+    #eeeeee 82%,
+    #ffffff 100%
+  );
+
+  border: 1px solid rgba(255,255,255,0.9);
+
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.9),
+    inset 0 -2px 4px rgba(0,0,0,0.08),
+    0 8px 18px rgba(0,0,0,0.15);
+
+  transition: all 0.28s ease;
+}
+
+.buttons a:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   SWITCH TEMA (NUEVO)
+========================= */
+
+.theme-switch-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 99999;
+}
 
 .theme-switch {
   position: relative;
   display: inline-block;
-  width: 64px;
-  height: 34px;
+  width: 60px;
+  height: 30px;
 }
 
 .theme-switch input {
-  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.theme-switch .slider {
+.slider {
   position: absolute;
   cursor: pointer;
-  inset: 0;
-  background-color: #e6e6e6;
-  border-radius: 34px;
-  transition: 0.4s;
-  box-shadow: inset 0 2px 6px rgba(0,0,0,0.15);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
 }
 
-.theme-switch .slider:before {
+.slider:before {
   position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  content: "☀️";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
   background-color: white;
   border-radius: 50%;
-  transition: 0.4s;
+  transition: .4s;
+  font-size: 14px;
 }
 
-.theme-switch input:checked + .slider {
-  background-color: #2b2b2b;
+input:checked + .slider {
+  background-color: #222;
 }
 
-.theme-switch input:checked + .slider:before {
+input:checked + .slider:before {
   transform: translateX(30px);
+  content: "🌙";
 }
 
 /* =========================
@@ -364,13 +404,35 @@ body.dark-mode .profile-box.elegante {
   border: 1px solid rgba(255,255,255,0.06);
 }
 
+body.dark-mode .card p,
+body.dark-mode .profile-text p,
+body.dark-mode .intro-text p,
+body.dark-mode .testimonial,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f1f1f1;
+}
+
+body.dark-mode .descripcion-profesional {
+  color: #d6d6d6;
+}
+
+body.dark-mode .info-btn {
+  background: #2a2a2a;
+  color: white;
+}
+
+body.dark-mode .info-btn span {
+  color: white;
+}
+
 /* =========================
-   RESPONSIVE (SIN CAMBIOS IMPORTANTES)
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
   .theme-switch-wrapper {
-    top: 14px;
-    right: 14px;
+    top: 12px;
+    right: 12px;
   }
 }

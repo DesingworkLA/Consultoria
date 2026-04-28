@@ -438,49 +438,74 @@ body.dark-mode .info-btn span {
 }
 
 /* =========================
-   BOTONES REDES SOCIALES - GLOW PLATEADO
+   BOTONES REDES SOCIALES - METAL “POWER ON”
 ========================= */
 
 .footer .buttons a {
   position: relative;
   overflow: hidden;
   transition: all 0.25s ease;
+
+  /* base metálica */
   background: linear-gradient(
     145deg,
     #ffffff 0%,
-    #e6e6e6 20%,
-    #cfcfcf 40%,
-    #f5f5f5 60%,
-    #bdbdbd 80%,
+    #e9e9e9 18%,
+    #cfcfcf 35%,
+    #f5f5f5 55%,
+    #bdbdbd 75%,
     #ffffff 100%
-  );
-}
-
-/* ✨ GLOW PLATEADO INTENSO */
-.footer .buttons a:hover {
-  transform: translateY(-5px) scale(1.12);
-
-  background: linear-gradient(
-    145deg,
-    #ffffff 0%,
-    #f2f2f2 25%,
-    #d9d9d9 50%,
-    #ffffff 75%,
-    #cfcfcf 100%
   );
 
   box-shadow:
-    0 0 10px rgba(220,220,220,0.9),
-    0 0 20px rgba(200,200,200,0.8),
-    0 0 35px rgba(180,180,180,0.6),
-    0 0 55px rgba(160,160,160,0.4),
+    inset 0 2px 4px rgba(255,255,255,0.9),
+    inset 0 -2px 4px rgba(0,0,0,0.08),
+    0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   ESTADO HOVER (ENCENDIDO)
+========================= */
+
+.footer .buttons a:hover {
+  transform: translateY(-5px) scale(1.12);
+
+  animation: powerOn 0.35s ease forwards;
+
+  box-shadow:
+    0 0 8px rgba(230,230,230,0.9),
+    0 0 18px rgba(210,210,210,0.8),
+    0 0 30px rgba(190,190,190,0.7),
+    0 0 50px rgba(170,170,170,0.5),
     0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* ICONO MÁS BRILLANTE PERO NEUTRO */
+/* ICONO */
 .footer .buttons a:hover i {
-  color: #2a2a2a;
+  color: #1f1f1f;
   text-shadow:
     0 0 6px rgba(255,255,255,0.9),
     0 0 12px rgba(220,220,220,0.8);
+}
+
+/* =========================
+   ANIMACIÓN "ENCENDIDO"
+========================= */
+
+@keyframes powerOn {
+  0% {
+    filter: brightness(0.9);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    filter: brightness(1.4);
+    box-shadow:
+      0 0 10px rgba(255,255,255,0.9),
+      0 0 25px rgba(220,220,220,0.8),
+      0 0 40px rgba(200,200,200,0.6),
+      0 12px 25px rgba(0,0,0,0.25);
+  }
+  100% {
+    filter: brightness(1.2);
+  }
 }

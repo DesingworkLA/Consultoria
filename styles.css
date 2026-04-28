@@ -438,47 +438,32 @@ body.dark-mode .info-btn span {
 }
 
 /* =========================
-   BRILLO REAL BOTONES REDES SOCIALES
+   BOTONES REDES SOCIALES - GLOW INTENSO FIJO
 ========================= */
 
 .footer .buttons a {
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
-/* efecto hover real de brillo */
+/* 🔥 GLOW FUERTE FIJO MIENTRAS HOVER */
 .footer .buttons a:hover {
-  transform: translateY(-4px) scale(1.1);
+  transform: translateY(-5px) scale(1.12);
+
+  background: #ffffff; /* hace que “explote” el brillo */
   box-shadow:
-    0 0 8px rgba(255, 255, 255, 0.9),
-    0 0 16px rgba(255, 255, 255, 0.6),
-    0 0 28px rgba(255, 255, 255, 0.4),
-    0 10px 20px rgba(0,0,0,0.25);
+    0 0 10px rgba(255,255,255,0.9),
+    0 0 20px rgba(255,255,255,0.8),
+    0 0 35px rgba(255,255,255,0.6),
+    0 0 60px rgba(255,255,255,0.4),
+    0 12px 25px rgba(0,0,0,0.25);
 }
 
-/* brillo animado tipo “pasada de luz” */
-.footer .buttons a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
-  transform: skewX(-20deg);
-}
-
-.footer .buttons a:hover::before {
-  animation: shine 0.8s ease;
-}
-
-@keyframes shine {
-  0% { left: -100%; }
-  100% { left: 200%; }
+/* ICONO MÁS ILUMINADO */
+.footer .buttons a:hover i {
+  color: #000;
+  text-shadow:
+    0 0 8px rgba(255,255,255,1),
+    0 0 15px rgba(255,255,255,0.8);
 }

@@ -13,27 +13,26 @@ document.querySelectorAll(".info-btn").forEach(btn => {
   });
 });
 
+/* =========================
+   DARK MODE SWITCH (NUEVO)
+========================= */
+
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
-const icon = themeToggle.querySelector("i");
 
 /* cargar preferencia guardada */
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
-  icon.classList.remove("fa-moon");
-  icon.classList.add("fa-sun");
+  themeToggle.checked = true;
 }
 
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-
-  if (body.classList.contains("dark-mode")) {
+/* cambiar tema */
+themeToggle.addEventListener("change", () => {
+  if (themeToggle.checked) {
+    body.classList.add("dark-mode");
     localStorage.setItem("theme", "dark");
-    icon.classList.remove("fa-moon");
-    icon.classList.add("fa-sun");
   } else {
+    body.classList.remove("dark-mode");
     localStorage.setItem("theme", "light");
-    icon.classList.remove("fa-sun");
-    icon.classList.add("fa-moon");
   }
 });

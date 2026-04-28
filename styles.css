@@ -436,3 +436,25 @@ body.dark-mode .info-btn span {
     right: 12px;
   }
 }
+
+/* =========================
+   EFECTO BOTONES REDES SOCIALES (HOVER GLOW)
+========================= */
+
+.footer .buttons a {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer .buttons a:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.4),
+    0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* efecto extra de brillo suave */
+.footer .buttons a:hover i {
+  text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}

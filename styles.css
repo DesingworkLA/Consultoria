@@ -71,7 +71,7 @@ body > *:not(.logo) {
 }
 
 .logo img {
-  height: 42px;
+  height: 50px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -286,10 +286,10 @@ body > *:not(.logo) {
 }
 
 .footer .buttons a {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   border-radius: 16px;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 /* =========================

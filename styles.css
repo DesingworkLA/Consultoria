@@ -342,3 +342,13 @@ body > *:not(.logo) {
     height: auto;
   }
 }
+
+.titulo-colorido span:nth-child(5n+1) { color: #E8A188; }
+.titulo-colorido span:nth-child(5n+2) { color: #E6C15A; }
+.titulo-colorido span:nth-child(5n+3) { color: #88D6C4; }
+.titulo-colorido span:nth-child(5n+4) { color: #CBB6D9; }
+.titulo-colorido span:nth-child(5n+5) { color: #7FA6D9; }
+
+.titulo-colorido {
+  line-height: 1.4;
+}

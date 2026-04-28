@@ -1,3 +1,7 @@
+/* =========================
+   RESET GENERAL
+========================= */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -13,7 +17,7 @@ html, body {
 }
 
 /* =========================
-   BODY
+   BODY + FONDO
 ========================= */
 
 body {
@@ -37,7 +41,6 @@ body::before {
   background-size: 120px 120px, 40px 40px, 60px 60px;
 }
 
-/* Todo excepto logo */
 body > *:not(.logo) {
   position: relative;
   z-index: 1;
@@ -49,20 +52,9 @@ body > *:not(.logo) {
 
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 40px 20px;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding-top: 20px;
 }
 
 /* =========================
@@ -72,14 +64,14 @@ body > *:not(.logo) {
 .logo {
   position: absolute;
   top: 70px;
-  left: max(20px, calc((100% - 1000px) / 2 + 5px));
+  left: max(20px, calc((100% - 1100px) / 2 + 5px));
   z-index: 9999;
   display: inline-block;
   line-height: 0;
 }
 
 .logo img {
-  height: 40px;
+  height: 42px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -87,12 +79,24 @@ body > *:not(.logo) {
 }
 
 /* =========================
+   HEADER
+========================= */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
+}
+
+/* =========================
    TITULO COLORIDO
 ========================= */
 
 .titulo-colorido {
+  font-size: clamp(30px, 4vw, 56px);
   line-height: 1.35;
-  font-size: clamp(28px, 4vw, 52px);
+  margin: 0;
 }
 
 .titulo-colorido span:nth-child(5n+1) { color: #E8A188; }
@@ -102,38 +106,19 @@ body > *:not(.logo) {
 .titulo-colorido span:nth-child(5n+5) { color: #7FA6D9; }
 
 /* =========================
-   INTRO TEXT
-========================= */
-
-.intro-text {
-  margin-bottom: 20px;
-}
-
-.intro-text h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.intro-text p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 15px;
-}
-
-/* =========================
-   PROFILE
+   PERFIL PROFESIONAL
 ========================= */
 
 .profile-box {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 24px;
-  margin-top: 15px;
+  gap: 28px;
+  margin-top: 20px;
 }
 
 .profile-box.elegante {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.88);
   border: 1px solid rgba(0,0,0,0.05);
   border-radius: 24px;
   padding: 30px;
@@ -150,7 +135,8 @@ body > *:not(.logo) {
 }
 
 .profile-text h2 {
-  margin: 0 0 15px;
+  margin: 0 0 14px;
+  font-size: 32px;
 }
 
 .profile-text h3 {
@@ -165,8 +151,22 @@ body > *:not(.logo) {
 }
 
 .descripcion-profesional {
-  margin-top: 20px;
+  margin-top: 18px;
   color: #555;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro-text {
+  margin-bottom: 20px;
+}
+
+.intro-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
 
 /* =========================
@@ -181,18 +181,18 @@ body > *:not(.logo) {
 }
 
 /* =========================
-   SERVICE
+   SERVICIOS
 ========================= */
 
 .service {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 25px;
+  gap: 28px;
   align-items: center;
-  margin-bottom: 40px;
   background: #f7f7f7;
-  border-radius: 20px;
-  padding: 20px;
+  border-radius: 22px;
+  padding: 24px;
+  margin-bottom: 20px;
 }
 
 .service.reverse {
@@ -204,28 +204,19 @@ body > *:not(.logo) {
   direction: ltr;
 }
 
-/* =========================
-   CARD
-========================= */
-
 .card {
   padding: 10px;
-  border-radius: 20px;
-  background: transparent;
-  height: 100%;
 }
 
 .card h3 {
   margin-bottom: 15px;
+  font-size: 26px;
 }
 
 .card p {
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 15px;
 }
-
-/* =========================
-   IMAGE CARD
-========================= */
 
 .image-card {
   border-radius: 20px;
@@ -236,7 +227,7 @@ body > *:not(.logo) {
 .image-card img {
   width: 100%;
   height: 100%;
-  min-height: 280px;
+  min-height: 300px;
   object-fit: cover;
 }
 
@@ -249,7 +240,7 @@ body > *:not(.logo) {
   text-decoration: none;
   background: #dddddd;
   color: black;
-  padding: 11px 20px;
+  padding: 12px 22px;
   border-radius: 14px;
   margin-top: 15px;
   font-weight: 500;
@@ -272,7 +263,7 @@ body > *:not(.logo) {
 .testimonial {
   margin-top: 60px;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* =========================
@@ -291,12 +282,12 @@ body > *:not(.logo) {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer .buttons a {
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
+  width: 42px;
+  height: 42px;
   border-radius: 16px;
   font-size: 22px;
 }
@@ -307,13 +298,10 @@ body > *:not(.logo) {
 
 .buttons a {
   text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 14px;
   color: #111;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255,255,255,0.9);
 
   background: linear-gradient(
     145deg,
@@ -325,6 +313,8 @@ body > *:not(.logo) {
     #eeeeee 82%,
     #ffffff 100%
   );
+
+  border: 1px solid rgba(255,255,255,0.9);
 
   box-shadow:
     inset 0 2px 4px rgba(255,255,255,0.9),
@@ -338,18 +328,14 @@ body > *:not(.logo) {
   transform: translateY(-4px);
 }
 
-.buttons a:active {
-  transform: scale(0.96);
-}
-
 /* =========================
-   THEME TOGGLE
+   BOTON DARK MODE
 ========================= */
 
 .theme-toggle {
   position: fixed;
-  top: 30px;
-  right: 30px;
+  top: 28px;
+  right: 28px;
   width: 52px;
   height: 52px;
   border: none;
@@ -363,7 +349,6 @@ body > *:not(.logo) {
 
   font-size: 20px;
   color: #222;
-
   background: rgba(255,255,255,0.95);
 
   box-shadow:
@@ -384,11 +369,185 @@ body > *:not(.logo) {
 body,
 .container,
 .service,
-.card,
 .profile-box,
 .info-btn,
-.footer,
-.intro-text,
-.testimonial {
+.theme-toggle {
   transition: all 0.35s ease;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+body.dark-mode .service {
+  background: #1e1e1e;
+}
+
+body.dark-mode .profile-box.elegante {
+  background: rgba(30,30,30,0.95);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+body.dark-mode .card p,
+body.dark-mode .profile-text p,
+body.dark-mode .intro-text p,
+body.dark-mode .testimonial,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f1f1f1;
+}
+
+body.dark-mode .descripcion-profesional {
+  color: #d6d6d6;
+}
+
+body.dark-mode .info-btn {
+  background: #2a2a2a;
+  color: white;
+}
+
+body.dark-mode .info-btn span {
+  color: white;
+}
+
+body.dark-mode .theme-toggle {
+  background: #1f1f1f;
+  color: white;
+}
+
+/* =========================
+   MONITOR GRANDE
+========================= */
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+
+  .titulo-colorido {
+    font-size: 60px;
+  }
+
+  .profile-image {
+    width: 320px;
+    height: 400px;
+  }
+
+  .card h3 {
+    font-size: 30px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .service {
+    grid-template-columns: 1fr;
+  }
+
+  .service.reverse {
+    direction: ltr;
+  }
+
+  .profile-box,
+  .profile-box.elegante {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  .titulo-colorido {
+    font-size: 40px;
+  }
+}
+
+/* =========================
+   MOBILE GRANDE
+========================= */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 82px;
+  }
+
+  .logo {
+    top: 18px;
+    left: 18px;
+  }
+
+  .logo img {
+    height: 52px;
+  }
+
+  .theme-toggle {
+    top: 18px;
+    right: 18px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .titulo-colorido {
+    font-size: 30px;
+  }
+
+  .profile-text h2 {
+    font-size: 26px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .profile-box.elegante {
+    padding: 22px;
+  }
+}
+
+/* =========================
+   MOBILE PEQUEÑO
+========================= */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 18px 14px;
+  }
+
+  .titulo-colorido {
+    font-size: 24px;
+  }
+
+  .profile-text h2 {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .info-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-card img {
+    min-height: 220px;
+  }
+
+  .footer .buttons a {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
 }

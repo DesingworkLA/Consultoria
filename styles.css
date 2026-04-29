@@ -437,33 +437,6 @@ body > *:not(.logo) {
 }
 
 /* =========================
-   RESPONSIVE SWITCH
-========================= */
-
-@media (max-width: 768px) {
-  .theme-switch-wrapper {
-    top: 14px;
-    right: 14px;
-  }
-
-  .theme-switch {
-    width: 66px;
-    height: 34px;
-  }
-
-  .slider::before {
-    width: 26px;
-    height: 26px;
-    top: 4px;
-    left: 4px;
-    font-size: 13px;
-  }
-
-  .theme-switch input:checked + .slider::before {
-    transform: translateX(30px);
-  }
-}
-/* =========================
    DARK MODE
 ========================= */
 
@@ -502,18 +475,6 @@ body.dark-mode .info-btn {
 body.dark-mode .info-btn span {
   color: white;
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-  .theme-switch-wrapper {
-    top: 12px;
-    right: 12px;
-  }
-}
-
 /* =========================
    BOTONES REDES SOCIALES - METAL “POWER ON”
 ========================= */

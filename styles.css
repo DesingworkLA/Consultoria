@@ -2,7 +2,8 @@
    RESET GENERAL
 ========================= */
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -99,11 +100,25 @@ body > *:not(.logo) {
   margin: 0;
 }
 
-.titulo-colorido span:nth-child(5n+1) { color: #E8A188; }
-.titulo-colorido span:nth-child(5n+2) { color: #E6C15A; }
-.titulo-colorido span:nth-child(5n+3) { color: #88D6C4; }
-.titulo-colorido span:nth-child(5n+4) { color: #CBB6D9; }
-.titulo-colorido span:nth-child(5n+5) { color: #7FA6D9; }
+.titulo-colorido span:nth-child(5n+1) {
+  color: #E8A188;
+}
+
+.titulo-colorido span:nth-child(5n+2) {
+  color: #E6C15A;
+}
+
+.titulo-colorido span:nth-child(5n+3) {
+  color: #88D6C4;
+}
+
+.titulo-colorido span:nth-child(5n+4) {
+  color: #CBB6D9;
+}
+
+.titulo-colorido span:nth-child(5n+5) {
+  color: #7FA6D9;
+}
 
 /* =========================
    PERFIL PROFESIONAL
@@ -118,11 +133,11 @@ body > *:not(.logo) {
 }
 
 .profile-box.elegante {
-  background: rgba(255,255,255,0.88);
-  border: 1px solid rgba(0,0,0,0.05);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 24px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(6px);
 }
 
@@ -131,7 +146,7 @@ body > *:not(.logo) {
   height: 320px;
   object-fit: cover;
   border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .profile-text h2 {
@@ -195,13 +210,12 @@ body > *:not(.logo) {
   margin-bottom: 20px;
 }
 
-.service.reverse {
-  direction: rtl;
+.service.reverse .card {
+  order: 2;
 }
 
-.service.reverse .card,
 .service.reverse .image-card {
-  direction: ltr;
+  order: 1;
 }
 
 .card {
@@ -244,7 +258,7 @@ body > *:not(.logo) {
   border-radius: 14px;
   margin-top: 15px;
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.25s ease;
 }
 
@@ -285,20 +299,22 @@ body > *:not(.logo) {
   gap: 10px;
 }
 
-.footer .buttons a {
+/* =========================
+   BOTONES REDES SOCIALES
+========================= */
+
+.buttons a {
   width: 65px;
   height: 65px;
   border-radius: 16px;
   font-size: 25px;
-}
 
-/* =========================
-   BOTONES
-========================= */
+  position: relative;
+  overflow: hidden;
 
-.buttons a {
   text-decoration: none;
   color: #111;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -306,37 +322,72 @@ body > *:not(.logo) {
   background: linear-gradient(
     145deg,
     #ffffff 0%,
-    #e8e8e8 18%,
+    #e9e9e9 18%,
     #cfcfcf 35%,
-    #f9f9f9 50%,
-    #bdbdbd 65%,
-    #eeeeee 82%,
+    #f5f5f5 55%,
+    #bdbdbd 75%,
     #ffffff 100%
   );
 
-  border: 1px solid rgba(255,255,255,0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 
   box-shadow:
-    inset 0 2px 4px rgba(255,255,255,0.9),
-    inset 0 -2px 4px rgba(0,0,0,0.08),
-    0 8px 18px rgba(0,0,0,0.15);
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.08),
+    0 8px 18px rgba(0, 0, 0, 0.15);
 
-  transition: all 0.28s ease;
+  transition: all 0.25s ease;
 }
 
 .buttons a:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px) scale(1.12);
+
+  animation: powerOn 0.35s ease forwards;
+
+  box-shadow:
+    0 0 8px rgba(230, 230, 230, 0.9),
+    0 0 18px rgba(210, 210, 210, 0.8),
+    0 0 30px rgba(190, 190, 190, 0.7),
+    0 0 50px rgba(170, 170, 170, 0.5),
+    0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.buttons a:hover i {
+  color: #1f1f1f;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(220, 220, 220, 0.8);
+}
+
+@keyframes powerOn {
+  0% {
+    filter: brightness(0.9);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    filter: brightness(1.4);
+    box-shadow:
+      0 0 10px rgba(255, 255, 255, 0.9),
+      0 0 25px rgba(220, 220, 220, 0.8),
+      0 0 40px rgba(200, 200, 200, 0.6),
+      0 12px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    filter: brightness(1.2);
+  }
 }
 
 /* =========================
-   SWITCH TEMA (ELEGANTE + ESQUINA)
+   SWITCH TEMA
 ========================= */
 
 .theme-switch-wrapper {
   position: fixed;
   top: 12px;
   right: 12px;
-  z-index: 999999;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -362,12 +413,12 @@ body > *:not(.logo) {
   cursor: pointer;
   border-radius: 50px;
 
-  background: rgba(255,255,255,0.95);
-  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 
   box-shadow:
-    0 8px 20px rgba(0,0,0,0.10),
-    inset 0 2px 4px rgba(255,255,255,0.8);
+    0 8px 20px rgba(0, 0, 0, 0.10),
+    inset 0 2px 4px rgba(255, 255, 255, 0.8);
 
   transition: all 0.3s ease;
 }
@@ -389,7 +440,7 @@ body > *:not(.logo) {
   font-size: 14px;
 
   box-shadow:
-    0 4px 10px rgba(0,0,0,0.12);
+    0 4px 10px rgba(0, 0, 0, 0.12);
 
   transition: all 0.3s ease;
 }
@@ -402,10 +453,6 @@ body > *:not(.logo) {
   transform: translateX(32px);
   content: "🌙";
   background: #ffffff;
-}
-
-.theme-switch:hover .slider {
-  transform: none;
 }
 
 /* =========================
@@ -450,8 +497,8 @@ body.dark-mode .service {
 }
 
 body.dark-mode .profile-box.elegante {
-  background: rgba(30,30,30,0.95);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 body.dark-mode .card p,
@@ -474,76 +521,4 @@ body.dark-mode .info-btn {
 
 body.dark-mode .info-btn span {
   color: white;
-}
-/* =========================
-   BOTONES REDES SOCIALES - METAL “POWER ON”
-========================= */
-
-.footer .buttons a {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.25s ease;
-
-  /* base metálica */
-  background: linear-gradient(
-    145deg,
-    #ffffff 0%,
-    #e9e9e9 18%,
-    #cfcfcf 35%,
-    #f5f5f5 55%,
-    #bdbdbd 75%,
-    #ffffff 100%
-  );
-
-  box-shadow:
-    inset 0 2px 4px rgba(255,255,255,0.9),
-    inset 0 -2px 4px rgba(0,0,0,0.08),
-    0 8px 18px rgba(0,0,0,0.15);
-}
-
-/* =========================
-   ESTADO HOVER (ENCENDIDO)
-========================= */
-
-.footer .buttons a:hover {
-  transform: translateY(-5px) scale(1.12);
-
-  animation: powerOn 0.35s ease forwards;
-
-  box-shadow:
-    0 0 8px rgba(230,230,230,0.9),
-    0 0 18px rgba(210,210,210,0.8),
-    0 0 30px rgba(190,190,190,0.7),
-    0 0 50px rgba(170,170,170,0.5),
-    0 12px 25px rgba(0,0,0,0.25);
-}
-
-/* ICONO */
-.footer .buttons a:hover i {
-  color: #1f1f1f;
-  text-shadow:
-    0 0 6px rgba(255,255,255,0.9),
-    0 0 12px rgba(220,220,220,0.8);
-}
-
-/* =========================
-   ANIMACIÓN "ENCENDIDO"
-========================= */
-
-@keyframes powerOn {
-  0% {
-    filter: brightness(0.9);
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    filter: brightness(1.4);
-    box-shadow:
-      0 0 10px rgba(255,255,255,0.9),
-      0 0 25px rgba(220,220,220,0.8),
-      0 0 40px rgba(200,200,200,0.6),
-      0 12px 25px rgba(0,0,0,0.25);
-  }
-  100% {
-    filter: brightness(1.2);
-  }
 }

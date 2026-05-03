@@ -456,34 +456,6 @@ body > *:not(.logo) {
 }
 
 /* =========================
-   RESPONSIVE SWITCH
-========================= */
-
-@media (max-width: 768px) {
-  .theme-switch-wrapper {
-    top: 10px;
-    right: 10px;
-  }
-
-  .theme-switch {
-    width: 64px;
-    height: 34px;
-  }
-
-  .slider::before {
-    width: 26px;
-    height: 26px;
-    top: 4px;
-    left: 4px;
-    font-size: 13px;
-  }
-
-  .theme-switch input:checked + .slider::before {
-    transform: translateX(30px);
-  }
-}
-
-/* =========================
    DARK MODE
 ========================= */
 
@@ -521,4 +493,170 @@ body.dark-mode .info-btn {
 
 body.dark-mode .info-btn span {
   color: white;
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 35px 25px;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 280px;
+  }
+
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+  .container {
+    padding: 25px 18px;
+  }
+
+  .logo {
+    top: 60px;
+    left: 18px;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
+  .titulo-colorido {
+    font-size: clamp(24px, 6vw, 40px);
+  }
+
+  .profile-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-box.elegante {
+    padding: 22px;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .service {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service.reverse .card,
+  .service.reverse .image-card {
+    order: unset;
+  }
+
+  .buttons a {
+    width: 58px;
+    height: 58px;
+    font-size: 22px;
+  }
+
+  .theme-switch-wrapper {
+    top: 10px;
+    right: 10px;
+  }
+
+  .theme-switch {
+    width: 64px;
+    height: 34px;
+  }
+
+  .slider::before {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .theme-switch input:checked + .slider::before {
+    transform: translateX(30px);
+  }
+
+}
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 130px;
+  }
+
+  .container {
+    padding: 20px 14px;
+  }
+
+  .logo {
+    top: 58px;
+    left: 14px;
+  }
+
+  .logo img {
+    height: 38px;
+  }
+
+  .header {
+    gap: 10px;
+  }
+
+  .titulo-colorido {
+    font-size: clamp(22px, 7vw, 30px);
+  }
+
+  .profile-box.elegante {
+    padding: 18px;
+  }
+
+  .profile-text h2 {
+    font-size: 24px;
+  }
+
+  .profile-text h3 {
+    font-size: 18px;
+  }
+
+  .intro-text p,
+  .card p,
+  .profile-text p,
+  .testimonial {
+    font-size: 14px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .info-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .buttons a {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
 }

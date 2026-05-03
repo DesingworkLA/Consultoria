@@ -485,3 +485,121 @@ body.dark-mode .info-btn span {
     font-size: 20px;
   }
 }
+
+/* ========================================
+   RESPONSIVE GLOBAL
+   (solo adapta otros dispositivos)
+======================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .container {
+    padding: 35px 20px;
+  }
+
+  .profile-box {
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 280px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+}
+
+/* Tablets pequeñas / móviles grandes */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+  .container {
+    padding: 25px 16px;
+  }
+
+  .logo {
+    top: 60px;
+    left: 16px;
+  }
+
+  .logo img {
+    height: 42px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .service {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service.reverse .card,
+  .service.reverse .image-card {
+    order: unset;
+  }
+
+  .image-card img {
+    min-height: 220px;
+  }
+
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 125px;
+  }
+
+  .container {
+    padding: 20px 12px;
+  }
+
+  .titulo-colorido {
+    line-height: 1.25;
+  }
+
+  .profile-box.elegante {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .profile-text h2 {
+    font-size: 24px;
+  }
+
+  .profile-text h3 {
+    font-size: 18px;
+  }
+
+  .profile-text p,
+  .card p,
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .card h3 {
+    font-size: 21px;
+  }
+
+  .service {
+    padding: 16px;
+  }
+
+}

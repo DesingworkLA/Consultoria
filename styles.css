@@ -399,7 +399,7 @@ body > *:not(.logo) {
 }
 
 .slider::before {
-  content: "☀️";
+  content: "☼";
   position: absolute;
 
   top: 50%;
@@ -407,10 +407,13 @@ body > *:not(.logo) {
 
   transform: translateY(-50%);
 
-  font-size: 22px;
+  font-size: 24px;
+  font-weight: 300;
+  color: #111;
 
   background: transparent;
   box-shadow: none;
+  border: none;
 
   width: auto;
   height: auto;
@@ -427,7 +430,8 @@ body > *:not(.logo) {
 }
 
 .theme-switch input:checked + .slider::before {
-  content: "🌙";
+  content: "☾";
+  color: #f5f5f5;
   transform: translate(28px, -50%);
 }
 

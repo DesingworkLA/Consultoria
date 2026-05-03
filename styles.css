@@ -100,25 +100,11 @@ body > *:not(.logo) {
   margin: 0;
 }
 
-.titulo-colorido span:nth-child(5n+1) {
-  color: #E8A188;
-}
-
-.titulo-colorido span:nth-child(5n+2) {
-  color: #E6C15A;
-}
-
-.titulo-colorido span:nth-child(5n+3) {
-  color: #88D6C4;
-}
-
-.titulo-colorido span:nth-child(5n+4) {
-  color: #CBB6D9;
-}
-
-.titulo-colorido span:nth-child(5n+5) {
-  color: #7FA6D9;
-}
+.titulo-colorido span:nth-child(5n+1) { color: #E8A188; }
+.titulo-colorido span:nth-child(5n+2) { color: #E6C15A; }
+.titulo-colorido span:nth-child(5n+3) { color: #88D6C4; }
+.titulo-colorido span:nth-child(5n+4) { color: #CBB6D9; }
+.titulo-colorido span:nth-child(5n+5) { color: #7FA6D9; }
 
 /* =========================
    PERFIL PROFESIONAL
@@ -210,17 +196,10 @@ body > *:not(.logo) {
   margin-bottom: 20px;
 }
 
-.service.reverse .card {
-  order: 2;
-}
+.service.reverse .card { order: 2; }
+.service.reverse .image-card { order: 1; }
 
-.service.reverse .image-card {
-  order: 1;
-}
-
-.card {
-  padding: 10px;
-}
+.card { padding: 10px; }
 
 .card h3 {
   margin-bottom: 15px;
@@ -246,14 +225,145 @@ body > *:not(.logo) {
 }
 
 /* =========================
+   BOTONES PAQUETES
+========================= */
+
+.info-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #dddddd;
+  color: black;
+  padding: 12px 22px;
+  border-radius: 14px;
+  margin-top: 15px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.info-btn:hover {
+  transform: translateY(-3px);
+}
+
+.info-btn span {
+  color: black;
+}
+
+/* =========================
+   TESTIMONIAL
+========================= */
+
+.testimonial {
+  margin-top: 60px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =========================
+   FOOTER + REDES
+========================= */
+
+.footer {
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.buttons a {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  font-size: 25px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #e9e9e9 18%,
+    #cfcfcf 35%,
+    #f5f5f5 55%,
+    #bdbdbd 75%,
+    #ffffff 100%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.08),
+    0 8px 18px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.25s ease;
+}
+
+.buttons a:hover {
+  transform: translateY(-5px) scale(1.12);
+  animation: powerOn 0.35s ease forwards;
+
+  box-shadow:
+    0 0 8px rgba(230, 230, 230, 0.9),
+    0 0 18px rgba(210, 210, 210, 0.8),
+    0 0 30px rgba(190, 190, 190, 0.7),
+    0 0 50px rgba(170, 170, 170, 0.5),
+    0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.buttons a:hover i {
+  color: #1f1f1f;
+
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(220, 220, 220, 0.8);
+}
+
+@keyframes powerOn {
+
+  0% {
+    filter: brightness(0.9);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    filter: brightness(1.4);
+
+    box-shadow:
+      0 0 10px rgba(255, 255, 255, 0.9),
+      0 0 25px rgba(220, 220, 220, 0.8),
+      0 0 40px rgba(200, 200, 200, 0.6),
+      0 12px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    filter: brightness(1.2);
+  }
+
+}
+
+/* =========================
    SWITCH TEMA
 ========================= */
 
 .theme-switch-wrapper {
   position: fixed;
   top: 12px;
-  right: 12px; /* <- derecha */
-  left: auto;  /* <- evita conflictos */
+  right: 12px;
+  left: auto;
   z-index: 9999;
 
   display: flex;
@@ -323,7 +433,6 @@ body > *:not(.logo) {
 .theme-switch input:checked + .slider::before {
   transform: translateX(32px);
   content: "🌙";
-  background: white;
 }
 
 /* =========================
@@ -386,82 +495,8 @@ body.dark-mode .info-btn span {
    RESPONSIVE
 ========================= */
 
-@media (max-width: 1024px) {
-
-  .logo {
-    left: 20px;
-  }
-
-  .container {
-    padding: 35px 25px;
-  }
-
-  .section {
-    gap: 30px;
-    margin-top: 50px;
-  }
-
-  .profile-image {
-    width: 220px;
-    height: 280px;
-  }
-
-  .image-card img {
-    min-height: 260px;
-  }
-
-}
-
 @media (max-width: 768px) {
 
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  body {
-    padding-top: 120px;
-  }
-
-  .container {
-    padding: 25px 16px;
-  }
-
-  .logo {
-    top: 60px;
-    left: 16px;
-  }
-
-  .logo img {
-    height: 42px;
-  }
-
-  .profile-text {
-    width: 100%;
-  }
-
-  .profile-text h2,
-  .profile-text h3,
-  .profile-text p {
-    text-align: center;
-  }
-
-  .service {
-    padding: 18px;
-  }
-
-  .card {
-    padding: 0;
-  }
-
-  .buttons a {
-    width: 58px;
-    height: 58px;
-    font-size: 22px;
-  }
-
-  /* SWITCH SIGUE A LA DERECHA */
   .theme-switch-wrapper {
     top: 10px;
     right: 10px;
@@ -486,87 +521,6 @@ body.dark-mode .info-btn span {
 }
 
 @media (max-width: 480px) {
-
-  body {
-    padding-top: 125px;
-  }
-
-  .container {
-    padding: 20px 12px;
-  }
-
-  .logo {
-    top: 56px;
-    left: 12px;
-  }
-
-  .logo img {
-    height: 38px;
-  }
-
-  .section {
-    gap: 24px;
-    margin-top: 40px;
-  }
-
-  .profile-box {
-    gap: 16px;
-  }
-
-  .profile-box.elegante {
-    border-radius: 16px;
-    padding: 16px;
-  }
-
-  .profile-image {
-    border-radius: 14px;
-  }
-
-  .service {
-    padding: 14px;
-    margin-bottom: 14px;
-  }
-
-  .image-card {
-    border-radius: 14px;
-  }
-
-  .image-card img {
-    min-height: 200px;
-  }
-
-  .profile-text h2 {
-    font-size: 24px;
-  }
-
-  .profile-text h3 {
-    font-size: 18px;
-  }
-
-  .card h3 {
-    font-size: 22px;
-  }
-
-  .intro-text p,
-  .card p,
-  .profile-text p,
-  .testimonial {
-    font-size: 14px;
-  }
-
-  .info-btn {
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-  }
-
-  .footer {
-    padding: 15px 10px;
-  }
-
-  .footer .buttons {
-    gap: 8px;
-  }
 
   .buttons a {
     width: 52px;

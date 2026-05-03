@@ -308,10 +308,8 @@ body > *:not(.logo) {
   height: 65px;
   border-radius: 16px;
   font-size: 25px;
-
   position: relative;
   overflow: hidden;
-
   text-decoration: none;
   color: #111;
 
@@ -354,12 +352,14 @@ body > *:not(.logo) {
 
 .buttons a:hover i {
   color: #1f1f1f;
+
   text-shadow:
     0 0 6px rgba(255, 255, 255, 0.9),
     0 0 12px rgba(220, 220, 220, 0.8);
 }
 
 @keyframes powerOn {
+
   0% {
     filter: brightness(0.9);
     transform: translateY(0) scale(1);
@@ -367,6 +367,7 @@ body > *:not(.logo) {
 
   50% {
     filter: brightness(1.4);
+
     box-shadow:
       0 0 10px rgba(255, 255, 255, 0.9),
       0 0 25px rgba(220, 220, 220, 0.8),
@@ -377,6 +378,7 @@ body > *:not(.logo) {
   100% {
     filter: brightness(1.2);
   }
+
 }
 
 /* =========================
@@ -388,6 +390,7 @@ body > *:not(.logo) {
   top: 12px;
   right: 12px;
   z-index: 9999;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -414,6 +417,7 @@ body > *:not(.logo) {
   border-radius: 50px;
 
   background: rgba(255, 255, 255, 0.95);
+
   border: 1px solid rgba(0, 0, 0, 0.06);
 
   box-shadow:
@@ -425,11 +429,14 @@ body > *:not(.logo) {
 
 .slider::before {
   content: "☀️";
+
   position: absolute;
   width: 28px;
   height: 28px;
+
   left: 4px;
   top: 4px;
+
   border-radius: 50%;
   background: white;
 
@@ -452,7 +459,7 @@ body > *:not(.logo) {
 .theme-switch input:checked + .slider::before {
   transform: translateX(32px);
   content: "🌙";
-  background: #ffffff;
+  background: white;
 }
 
 /* =========================
@@ -496,13 +503,23 @@ body.dark-mode .info-btn span {
 }
 
 /* =========================
-   RESPONSIVE TABLET
+   RESPONSIVE
 ========================= */
 
+/* Tablets grandes */
 @media (max-width: 1024px) {
+
+  .logo {
+    left: 20px;
+  }
 
   .container {
     padding: 35px 25px;
+  }
+
+  .section {
+    gap: 30px;
+    margin-top: 50px;
   }
 
   .profile-image {
@@ -510,59 +527,54 @@ body.dark-mode .info-btn span {
     height: 280px;
   }
 
+  .image-card img {
+    min-height: 260px;
+  }
+
 }
 
-/* =========================
-   RESPONSIVE TABLET
-========================= */
-
+/* Tablets */
 @media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
   body {
     padding-top: 120px;
   }
 
   .container {
-    padding: 25px 18px;
+    padding: 25px 16px;
   }
 
   .logo {
     top: 60px;
-    left: 18px;
+    left: 16px;
   }
 
   .logo img {
     height: 42px;
   }
 
-  .titulo-colorido {
-    font-size: clamp(24px, 6vw, 40px);
+  .profile-text {
+    width: 100%;
   }
 
-  .profile-box {
-    flex-direction: column;
+  .profile-text h2,
+  .profile-text h3,
+  .profile-text p {
     text-align: center;
   }
 
-  .profile-box.elegante {
-    padding: 22px;
-  }
-
-  .profile-image {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    aspect-ratio: 4 / 5;
-  }
-
   .service {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    padding: 18px;
   }
 
-  .service.reverse .card,
-  .service.reverse .image-card {
-    order: unset;
+  .card {
+    padding: 0;
   }
 
   .buttons a {
@@ -593,39 +605,55 @@ body.dark-mode .info-btn span {
 
 }
 
-/* =========================
-   RESPONSIVE CELULAR
-========================= */
-
+/* Celulares */
 @media (max-width: 480px) {
 
   body {
-    padding-top: 130px;
+    padding-top: 125px;
   }
 
   .container {
-    padding: 20px 14px;
+    padding: 20px 12px;
   }
 
   .logo {
-    top: 58px;
-    left: 14px;
+    top: 56px;
+    left: 12px;
   }
 
   .logo img {
     height: 38px;
   }
 
-  .header {
-    gap: 10px;
+  .section {
+    gap: 24px;
+    margin-top: 40px;
   }
 
-  .titulo-colorido {
-    font-size: clamp(22px, 7vw, 30px);
+  .profile-box {
+    gap: 16px;
   }
 
   .profile-box.elegante {
-    padding: 18px;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .profile-image {
+    border-radius: 14px;
+  }
+
+  .service {
+    padding: 14px;
+    margin-bottom: 14px;
+  }
+
+  .image-card {
+    border-radius: 14px;
+  }
+
+  .image-card img {
+    min-height: 200px;
   }
 
   .profile-text h2 {
@@ -636,6 +664,10 @@ body.dark-mode .info-btn span {
     font-size: 18px;
   }
 
+  .card h3 {
+    font-size: 22px;
+  }
+
   .intro-text p,
   .card p,
   .profile-text p,
@@ -643,14 +675,18 @@ body.dark-mode .info-btn span {
     font-size: 14px;
   }
 
-  .card h3 {
-    font-size: 22px;
-  }
-
   .info-btn {
     width: 100%;
     text-align: center;
     padding: 14px;
+  }
+
+  .footer {
+    padding: 15px 10px;
+  }
+
+  .footer .buttons {
+    gap: 8px;
   }
 
   .buttons a {

@@ -388,8 +388,8 @@ body > *:not(.logo) {
 .theme-switch-wrapper {
   position: fixed;
   top: 12px;
-  left: 12px;
-  right: auto;
+  right: 12px;
+  left: auto;
   z-index: 9999;
 
   display: flex;

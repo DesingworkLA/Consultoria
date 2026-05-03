@@ -362,10 +362,7 @@ body > *:not(.logo) {
 .theme-switch-wrapper {
   position: fixed;
   top: 12px;
-
-  /* Lo pega al lado derecho del contenido */
-  right: max(20px, calc((100vw - 1100px) / 2 + 20px));
-
+  right: 20px;
   left: auto;
   z-index: 9999;
 

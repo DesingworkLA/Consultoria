@@ -388,12 +388,13 @@ body > *:not(.logo) {
 .theme-switch-wrapper {
   position: fixed;
   top: 12px;
-  right: 12px;
+  left: 12px;
+  right: auto;
   z-index: 9999;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .theme-switch {
@@ -506,7 +507,6 @@ body.dark-mode .info-btn span {
    RESPONSIVE
 ========================= */
 
-/* Tablets grandes */
 @media (max-width: 1024px) {
 
   .logo {
@@ -533,7 +533,6 @@ body.dark-mode .info-btn span {
 
 }
 
-/* Tablets */
 @media (max-width: 768px) {
 
   html,
@@ -585,7 +584,8 @@ body.dark-mode .info-btn span {
 
   .theme-switch-wrapper {
     top: 10px;
-    right: 10px;
+    left: 10px;
+    right: auto;
   }
 
   .theme-switch {
@@ -605,7 +605,6 @@ body.dark-mode .info-btn span {
 
 }
 
-/* Celulares */
 @media (max-width: 480px) {
 
   body {

@@ -362,7 +362,10 @@ body > *:not(.logo) {
 .theme-switch-wrapper {
   position: fixed;
   top: 12px;
-  right: 12px;
+
+  /* Lo alinea con el borde derecho del container de 1100px */
+  right: max(20px, calc((100% - 1100px) / 2 + 5px));
+
   left: auto;
   z-index: 9999;
 

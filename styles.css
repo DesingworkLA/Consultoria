@@ -362,7 +362,7 @@ body > *:not(.logo) {
 .theme-switch-wrapper {
   position: fixed;
   top: 12px;
-  right: -180px;
+  right: -400px;
   left: auto;
   z-index: 9999;
 

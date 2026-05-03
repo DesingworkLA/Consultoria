@@ -584,8 +584,8 @@ body.dark-mode .info-btn span {
 
   .theme-switch-wrapper {
     top: 10px;
-    left: 10px;
-    right: auto;
+    right: 10px;
+    left: auto;
   }
 
   .theme-switch {

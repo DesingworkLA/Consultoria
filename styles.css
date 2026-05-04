@@ -456,8 +456,8 @@ body.dark-mode .info-btn span {
 @media (max-width: 768px) {
 
   .theme-switch-wrapper {
-    top: -30px;
-    right: -100px;
+    top: -50px;
+    right: -110px;
     left: auto;
   }
 

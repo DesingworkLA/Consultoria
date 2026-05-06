@@ -126,3 +126,12 @@ body{
   border-radius: 0 100% 0 0;
   transform: rotate(20deg);
 }
+
+iframe{
+  margin-top: 30px;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  background: white;
+}

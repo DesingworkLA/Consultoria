@@ -13,6 +13,18 @@ body{
   line-height: 1.6;
 }
 
+/* LOGO */
+.logo-container{
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+.logo{
+  width: 140px;
+  height: auto;
+  cursor: pointer;
+}
+
 /* HERO */
 .hero{
   text-align: center;

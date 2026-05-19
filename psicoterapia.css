@@ -8,10 +8,14 @@
 /* GENERAL */
 body{
   font-family: Arial, sans-serif;
+
   background:
-    radial-gradient(circle at top right, rgba(136,214,196,0.15), transparent 25%),
-    radial-gradient(circle at bottom left, rgba(136,214,196,0.12), transparent 25%),
-    #F5F7F8;
+    linear-gradient(
+      180deg,
+      #eef8f6 0%,
+      #f5f7f8 40%,
+      #edf7f5 100%
+    );
 
   color: #333;
   line-height: 1.6;

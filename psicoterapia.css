@@ -225,3 +225,36 @@ body{
   text-shadow:
     2px 2px 0 rgba(136,214,196,0.25);
 }
+
+/* LISTA ELEGANTE PREMIUM */
+.contenido ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.contenido li{
+  position: relative;
+
+  padding-left: 32px;
+
+  margin-bottom: 18px;
+}
+
+.contenido li::before{
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 12px;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #88D6C4;
+
+  box-shadow:
+    0 0 10px rgba(136,214,196,0.35);
+}

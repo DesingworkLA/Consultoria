@@ -183,3 +183,17 @@ iframe{
 
   overflow: hidden;
 }
+
+.hero h1,
+.contenido h2,
+.contacto h2{
+  font-family: 'Playfair Display', serif;
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+
+  color: #2f5d60;
+}

@@ -87,32 +87,34 @@
 </section>
 
 <script>
-  const toggleBtn = document.getElementById("darkModeToggle");
-
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-</script>
-
-<script>
 const symbols = [
-  "A","B","C","1","2","3","4","5","6","7","8","9",
-  "+","−","×","÷"
+  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
+  "1","2","3","4","5","6","7","8","9","0",
+  "+","-","×","÷"
 ];
 
 const container = document.querySelector(".edu-background");
 
-for(let i = 0; i < 140; i++){
+// MÁS DENSIDAD REAL (esto es clave)
+const total = 400;
+
+for(let i = 0; i < total; i++){
   const span = document.createElement("span");
 
   span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
 
-  span.style.top = Math.random() * 100 + "vh";
-  span.style.left = Math.random() * 100 + "vw";
+  // distribución más uniforme (no tan random vacío)
+  const x = (i % 25) * 4;  // columnas
+  const y = Math.floor(i / 25) * 4; // filas
 
-  span.style.opacity = Math.random() * 0.12 + 0.03;
+  span.style.left = x + "vw";
+  span.style.top = y + "vh";
 
-  span.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
+  // variación visual suave
+  span.style.fontSize = (10 + Math.random() * 10) + "px";
+  span.style.opacity = (0.03 + Math.random() * 0.05);
+
+  span.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
 
   container.appendChild(span);
 }

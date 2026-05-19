@@ -29,10 +29,36 @@ body{
   z-index: 1;
 }
 
+/* =========================
+   FONDO SOPA DE LETRAS
+========================= */
+.edu-background{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.edu-background span{
+  position: absolute;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: rgba(45, 95, 122, 0.08);
+
+  user-select: none;
+
+  font-family: 'Poppins', sans-serif;
+}
+
 /* LOGO */
 .logo-container{
   text-align: center;
   padding: 20px 0 10px;
+  position: relative;
+  z-index: 2;
 }
 
 .logo{
@@ -47,6 +73,8 @@ body{
   text-align: center;
   padding: 80px 20px;
   background: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .hero p{
@@ -60,12 +88,16 @@ body{
   max-width: 900px;
   margin: auto;
   padding: 60px 20px;
+  position: relative;
+  z-index: 2;
 }
 
 /* CTA FINAL */
 .contacto{
   text-align: center;
   padding: 80px 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .contacto p{
@@ -130,7 +162,7 @@ iframe{
   overflow: hidden;
 }
 
-/* TITULO PRINCIPAL */
+/* TITULOS */
 .hero h1{
   font-family: 'Baloo 2', cursive;
   font-size: 3rem;
@@ -141,7 +173,6 @@ iframe{
   text-shadow: 2px 2px 0 rgba(167,216,255,0.25);
 }
 
-/* TITULOS SECUNDARIOS */
 .contenido h2,
 .contacto h2{
   font-family: 'Baloo 2', cursive;
@@ -239,6 +270,7 @@ body.dark-mode iframe{
   display: block;
 
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232D5F7A' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M5 19l1.5-1.5'/%3E%3C/svg%3E");
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -246,12 +278,4 @@ body.dark-mode iframe{
 
 body.dark-mode #darkModeToggle::before{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239FE7FF' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
-}
-
-.edu-background{
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
 }

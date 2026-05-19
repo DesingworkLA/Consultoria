@@ -200,3 +200,7 @@ iframe{
   text-shadow:
     2px 2px 0 rgba(136,214,196,0.25);
 }
+
+body{
+  font-family: 'Poppins', sans-serif;
+}

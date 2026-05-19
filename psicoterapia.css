@@ -184,10 +184,15 @@ iframe{
   overflow: hidden;
 }
 
-.hero h1,
-.contenido h2,
-.contacto h2{
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TITULO PRINCIPAL */
+.hero h1{
   font-family: 'Baloo 2', cursive;
+
+  font-size: 3rem;
 
   font-weight: 700;
 
@@ -201,6 +206,21 @@ iframe{
     2px 2px 0 rgba(136,214,196,0.25);
 }
 
-body{
-  font-family: 'Poppins', sans-serif;
+/* TITULOS SECUNDARIOS */
+.contenido h2,
+.contacto h2{
+  font-family: 'Baloo 2', cursive;
+
+  font-size: 2.3rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #2f5d60;
+
+  transform: rotate(-1deg);
+
+  text-shadow:
+    2px 2px 0 rgba(136,214,196,0.25);
 }

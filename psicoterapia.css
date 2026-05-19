@@ -8,7 +8,11 @@
 /* GENERAL */
 body{
   font-family: Arial, sans-serif;
-  background-color: #F5F7F8;
+  background:
+    radial-gradient(circle at top right, rgba(136,214,196,0.15), transparent 25%),
+    radial-gradient(circle at bottom left, rgba(136,214,196,0.12), transparent 25%),
+    #F5F7F8;
+
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
@@ -31,7 +35,7 @@ body{
 .hero{
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(to bottom, #eaf7f8, #ffffff);
+  background: transparent;
 }
 
 .hero h1{
@@ -127,13 +131,21 @@ body{
   transform: rotate(20deg);
 }
 
+.contenido,
+.contacto{
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(6px);
+  border-radius: 24px;
+  margin-top: 30px;
+}
+
 iframe{
   width: 100%;
   max-width: 1100px;
   height: 1000px;
   border: none;
   border-radius: 20px;
-  background: white;
   display: block;
   margin: 30px auto;
+  overflow: hidden;
 }

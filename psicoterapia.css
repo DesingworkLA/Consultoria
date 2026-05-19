@@ -187,13 +187,16 @@ iframe{
 .hero h1,
 .contenido h2,
 .contacto h2{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Baloo 2', cursive;
 
-  font-style: italic;
+  font-weight: 700;
 
-  font-weight: 600;
-
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 
   color: #2f5d60;
+
+  transform: rotate(-1deg);
+
+  text-shadow:
+    2px 2px 0 rgba(136,214,196,0.25);
 }

@@ -306,9 +306,18 @@ body.dark-mode{
   color: #f2f2f2;
 }
 
-body.dark-mode .contenido,
-body.dark-mode .contacto{
+body.dark-mode .contenido{
   background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode .contacto{
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(35,55,58,0.45) 0%,
+      rgba(255,255,255,0.08) 40%,
+      rgba(255,255,255,0.95) 100%
+    );
 }
 
 body.dark-mode p,
@@ -325,5 +334,14 @@ body.dark-mode .contacto h2{
 body.dark-mode #darkModeToggle{
   background: rgba(30,30,30,0.7);
 
+  color: #9fe7d8;
+}
+
+/* MANTENER CALENDARIO CLARO */
+body.dark-mode iframe{
+  filter: none;
+}
+
+body.dark-mode .contacto h2{
   color: #9fe7d8;
 }

@@ -289,9 +289,10 @@ body.dark-mode .contacto{
       rgba(255,255,255,0.15) 0%,
       rgba(255,255,255,0.35) 20%,
       rgba(255,255,255,0.65) 45%,
-      rgba(255,255,255,0.92) 70%,
-      #ffffff 100%
+      rgba(255,255,255,0.92) 70%
     );
+
+  position: relative;
 }
 
 body.dark-mode p,
@@ -317,4 +318,12 @@ body.dark-mode .contacto h2{
 
 body.dark-mode iframe{
   filter: none;
+}
+
+body.dark-mode .contacto iframe{
+  background: #ffffff;
+}
+
+body.dark-mode .contacto > *:last-child{
+  background: #ffffff;
 }

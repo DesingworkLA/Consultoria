@@ -256,3 +256,74 @@ body{
 
   opacity: 0.95;
 }
+
+/* BOTON DARK MODE */
+#darkModeToggle{
+  position: fixed;
+
+  top: 25px;
+  right: 25px;
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.65);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.08);
+
+  cursor: pointer;
+
+  font-size: 1.2rem;
+
+  color: #2f5d60;
+
+  z-index: 9999;
+
+  transition: 0.3s ease;
+}
+
+#darkModeToggle:hover{
+  transform: scale(1.08);
+}
+
+/* DARK MODE */
+body.dark-mode{
+  background:
+    linear-gradient(
+      180deg,
+      #162325 0%,
+      #1b2d30 45%,
+      #22393c 100%
+    );
+
+  color: #f2f2f2;
+}
+
+body.dark-mode .contenido,
+body.dark-mode .contacto{
+  background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode p,
+body.dark-mode li{
+  color: #d7e1e2;
+}
+
+body.dark-mode .hero h1,
+body.dark-mode .contenido h2,
+body.dark-mode .contacto h2{
+  color: #9fe7d8;
+}
+
+body.dark-mode #darkModeToggle{
+  background: rgba(30,30,30,0.7);
+
+  color: #9fe7d8;
+}

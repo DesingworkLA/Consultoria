@@ -315,3 +315,22 @@ body::before{
   z-index: -1;
   pointer-events: none;
 }
+
+.edu-background{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.edu-background span{
+  position: absolute;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+
+  color: rgba(45, 95, 122, 0.05);
+
+  user-select: none;
+}

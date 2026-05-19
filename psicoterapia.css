@@ -169,33 +169,3 @@ iframe{
   margin: 30px auto;
   overflow: hidden;
 }
-
-.calendar-wrapper{
-  max-width: 1150px;
-  margin: 40px auto;
-  padding: 18px;
-
-  background: rgba(255,255,255,0.45);
-
-  backdrop-filter: blur(10px);
-
-  border-radius: 28px;
-
-  box-shadow:
-    0 10px 35px rgba(0,0,0,0.04);
-
-  border: 1px solid rgba(255,255,255,0.35);
-}
-
-iframe{
-  width: 100%;
-  height: 950px;
-
-  border: none;
-
-  border-radius: 18px;
-
-  display: block;
-
-  background: transparent;
-}

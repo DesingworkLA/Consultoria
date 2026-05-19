@@ -18,9 +18,6 @@
 <!-- FONDO LETRAS -->
 <div class="edu-background"></div>
 
-<div class="tree-design tree-top-right"></div>
-<div class="tree-design tree-bottom-left"></div>
-
 <div class="logo-container">
   <a href="index.html">
     <img src="fotos/Logo Vane rec.png" alt="Logo principal" class="logo">
@@ -95,24 +92,23 @@ const symbols = [
 
 const container = document.querySelector(".edu-background");
 
-// MÁS DENSIDAD REAL (esto es clave)
-const total = 400;
+const total = 450; // densidad alta controlada
 
 for(let i = 0; i < total; i++){
   const span = document.createElement("span");
 
   span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
 
-  // distribución más uniforme (no tan random vacío)
-  const x = (i % 25) * 4;  // columnas
-  const y = Math.floor(i / 25) * 4; // filas
+  // distribución uniforme tipo “sopa de letras”
+  const cols = 30;
+  const x = (i % cols) * 3.5;
+  const y = Math.floor(i / cols) * 3.5;
 
   span.style.left = x + "vw";
   span.style.top = y + "vh";
 
-  // variación visual suave
-  span.style.fontSize = (10 + Math.random() * 10) + "px";
-  span.style.opacity = (0.03 + Math.random() * 0.05);
+  span.style.fontSize = (10 + Math.random() * 8) + "px";
+  span.style.opacity = (0.03 + Math.random() * 0.06);
 
   span.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
 

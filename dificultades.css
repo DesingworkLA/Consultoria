@@ -249,15 +249,16 @@ body.dark-mode .contenido{
   background: rgba(255,255,255,0.05);
 }
 
-body.dark-mode .contacto{
+body.dark-mode{
   background:
     linear-gradient(
-      to bottom,
-      rgba(255,255,255,0.12) 0%,
-      rgba(255,255,255,0.30) 30%,
-      rgba(255,255,255,0.70) 70%,
-      #ffffff 100%
+      180deg,
+      #0f1b24 0%,
+      #132633 45%,
+      #183244 100%
     );
+
+  color: #f2f2f2;
 }
 
 body.dark-mode p,

@@ -311,13 +311,7 @@ body.dark-mode .contenido{
 }
 
 body.dark-mode .contacto{
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(35,55,58,0.45) 0%,
-      rgba(255,255,255,0.08) 40%,
-      rgba(255,255,255,0.95) 100%
-    );
+  background: inherit;
 }
 
 body.dark-mode p,
@@ -344,4 +338,8 @@ body.dark-mode iframe{
 
 body.dark-mode .contacto h2{
   color: #9fe7d8;
+}
+
+body.dark-mode iframe{
+  filter: none;
 }

@@ -109,7 +109,8 @@ for(let i = 0; i < 120; i++){
   span.style.top = Math.random() * 100 + "vh";
   span.style.left = Math.random() * 100 + "vw";
 
-  span.style.transform = "rotate(" + (Math.random() * 40 - 20) + "deg)";
+  span.style.opacity = Math.random() * 0.15 + 0.03;
+span.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
 
   container.appendChild(span);
 }

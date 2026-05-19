@@ -7,7 +7,7 @@
 
 /* GENERAL */
 body{
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 
   background:
 
@@ -63,12 +63,6 @@ body{
   background: transparent;
 }
 
-.hero h1{
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #2d4d50;
-}
-
 .hero p{
   max-width: 700px;
   margin: auto;
@@ -82,28 +76,10 @@ body{
   padding: 60px 20px;
 }
 
-.contenido h2{
-  margin-bottom: 20px;
-  color: #4a7f83;
-}
-
-.contenido ul{
-  padding-left: 20px;
-}
-
-.contenido li{
-  margin-bottom: 12px;
-}
-
 /* CTA FINAL */
 .contacto{
   text-align: center;
   padding: 80px 20px;
-}
-
-.contacto h2{
-  margin-bottom: 15px;
-  color: #2d4d50;
 }
 
 .contacto p{
@@ -183,10 +159,6 @@ iframe{
     );
 
   overflow: hidden;
-}
-
-body{
-  font-family: 'Poppins', sans-serif;
 }
 
 /* TITULO PRINCIPAL */
@@ -329,11 +301,6 @@ body.dark-mode #darkModeToggle{
   background: rgba(30,30,30,0.7);
 
   color: #9fe7d8;
-}
-
-/* MANTENER CALENDARIO CLARO */
-body.dark-mode iframe{
-  filter: none;
 }
 
 body.dark-mode .contacto h2{

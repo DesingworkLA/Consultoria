@@ -226,7 +226,7 @@ body{
     2px 2px 0 rgba(136,214,196,0.25);
 }
 
-/* LISTA ELEGANTE PREMIUM */
+/* LISTA MINIMALISTA PREMIUM */
 .contenido ul{
   list-style: none;
   padding-left: 0;
@@ -235,9 +235,11 @@ body{
 .contenido li{
   position: relative;
 
-  padding-left: 32px;
+  padding-left: 34px;
 
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+
+  color: #4b5c5e;
 }
 
 .contenido li::before{
@@ -246,15 +248,17 @@ body{
   position: absolute;
 
   left: 0;
-  top: 12px;
+  top: 15px;
 
-  width: 7px;
-  height: 7px;
+  width: 16px;
+  height: 2px;
 
-  border-radius: 50%;
+  border-radius: 20px;
 
-  background: #88D6C4;
-
-  box-shadow:
-    0 0 10px rgba(136,214,196,0.35);
+  background:
+    linear-gradient(
+      to right,
+      #88D6C4,
+      rgba(136,214,196,0.25)
+    );
 }

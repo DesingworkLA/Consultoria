@@ -13,21 +13,21 @@ body{
 
     radial-gradient(
       circle at top right,
-      rgba(136, 214, 196, 0.22),
+      rgba(230, 193, 90, 0.22),
       transparent 30%
     ),
 
     radial-gradient(
       circle at bottom left,
-      rgba(136, 214, 196, 0.18),
+      rgba(230, 193, 90, 0.18),
       transparent 28%
     ),
 
     linear-gradient(
       180deg,
-      #eef8f6 0%,
-      #e8f4f2 35%,
-      #dff0ed 70%,
+      #fff9e9 0%,
+     #fff3cf 35%,
+     #ffedb2 70%,
       #ffffff 100%
     );
 
@@ -89,7 +89,7 @@ body{
 .btn{
   display: inline-block;
   text-decoration: none;
-  background: #7bb8bd;
+  background: #d4ab34;
   color: white;
   padding: 14px 30px;
   border-radius: 8px;
@@ -107,8 +107,8 @@ body{
   right: 0;
   width: 220px;
   height: 220px;
-  border-top: 4px solid #88D6C4;
-  border-left: 4px solid #88D6C4;
+  border-top: 4px solid #E6C15A;
+  border-left: 4px solid #E6C15A;
   border-radius: 0 0 0 100%;
   transform: rotate(20deg);
 }
@@ -119,8 +119,8 @@ body{
   left: 0;
   width: 180px;
   height: 180px;
-  border-bottom: 4px solid #88D6C4;
-  border-right: 4px solid #88D6C4;
+  border-bottom: 4px solid #E6C15A;
+  border-right: 4px solid #E6C15A;
   border-radius: 0 100% 0 0;
   transform: rotate(20deg);
 }
@@ -171,12 +171,12 @@ iframe{
 
   letter-spacing: 1px;
 
-  color: #2f5d60;
+  color: #8a6712;
 
   transform: rotate(-1deg);
 
   text-shadow:
-    2px 2px 0 rgba(136,214,196,0.25);
+    2px 2px 0 rgba(230,193,90,0.25);
 }
 
 /* TITULOS SECUNDARIOS */
@@ -190,12 +190,12 @@ iframe{
 
   letter-spacing: 1px;
 
-  color: #2f5d60;
+  color: #8a6712;
 
   transform: rotate(-1deg);
 
   text-shadow:
-    2px 2px 0 rgba(136,214,196,0.25);
+    2px 2px 0 rgba(230,193,90,0.25);
 }
 
 /* LISTA ESTILO DOODLE ELEGANTE */
@@ -224,7 +224,7 @@ iframe{
 
   font-size: 1.2rem;
 
-  color: #2f5d60;
+  color: #8a6712;
 
   opacity: 0.95;
 }
@@ -254,7 +254,7 @@ iframe{
 
   font-size: 1.2rem;
 
-  color: #2f5d60;
+  color: #8a6712;
 
   z-index: 9999;
 
@@ -275,7 +275,7 @@ body.dark-mode{
       #22393c 100%
     );
 
-  color: #f2f2f2;
+  color: #f0d67b;
 }
 
 body.dark-mode .contenido{

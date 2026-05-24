@@ -26,8 +26,8 @@ body{
     linear-gradient(
       180deg,
       #fff9e9 0%,
-     #fff3cf 35%,
-     #ffedb2 70%,
+      #fff3cf 35%,
+      #ffedb2 70%,
       #ffffff 100%
     );
 
@@ -308,6 +308,8 @@ body.dark-mode .contacto h2{
 
 body.dark-mode #darkModeToggle{
   background: rgba(30,30,30,0.7);
+  color: #f0d67b;
+}
 
 body.dark-mode .contacto h2{
   color: #f0d67b;
@@ -349,5 +351,5 @@ body.dark-mode .contacto > *:last-child{
 
 /* LUNA (cuando dark mode está activo) */
 body.dark-mode #darkModeToggle::before{
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239fe7d8' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f0d67b' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
 }

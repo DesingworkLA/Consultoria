@@ -141,6 +141,7 @@ iframe{
   border-radius: 20px;
   display: block;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 /* DESVANECIDO HACIA EL CALENDARIO */

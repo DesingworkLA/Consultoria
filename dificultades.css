@@ -137,10 +137,12 @@ iframe{
   width: 100%;
   max-width: 1100px;
   height: 1000px;
+
   border: none;
+
   border-radius: 20px;
+
   display: block;
-  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -346,4 +348,14 @@ body.dark-mode .contacto > *:last-child{
 /* LUNA (cuando dark mode está activo) */
 body.dark-mode #darkModeToggle::before{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f0d67b' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
+}
+
+.calendar-wrapper{
+  padding: 20px;
+
+  background: transparent;
+
+  border-radius: 24px;
+
+  margin-top: 20px;
 }

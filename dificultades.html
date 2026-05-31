@@ -15,9 +15,6 @@
 
 <button id="darkModeToggle"></button>
 
-<!-- FONDO LETRAS -->
-<div class="edu-background"></div>
-
 <div class="logo-container">
   <a href="index.html">
     <img src="fotos/Logo Vane rec.png" alt="Logo principal" class="logo">
@@ -76,39 +73,6 @@
   </iframe>
 
 </section>
-
-<script>
-const symbols = [
-  "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",
-  "1","2","3","4","5","6","7","8","9","0",
-  "+","-","×","÷"
-];
-
-const container = document.querySelector(".edu-background");
-
-const total = 450; // densidad alta controlada
-
-for(let i = 0; i < total; i++){
-  const span = document.createElement("span");
-
-  span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-
-  // distribución uniforme tipo “sopa de letras”
-  const cols = 30;
-  const x = (i % cols) * 3.5;
-  const y = Math.floor(i / cols) * 3.5;
-
-  span.style.left = x + "vw";
-  span.style.top = y + "vh";
-
-  span.style.fontSize = (10 + Math.random() * 8) + "px";
-  span.style.opacity = (0.03 + Math.random() * 0.06);
-
-  span.style.transform = `rotate(${Math.random() * 30 - 15}deg)`;
-
-  container.appendChild(span);
-}
-</script>
 
 <script>
 const toggle = document.getElementById("darkModeToggle");

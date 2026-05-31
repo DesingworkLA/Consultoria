@@ -151,11 +151,12 @@ iframe{
   background:
     linear-gradient(
       to bottom,
-      rgba(255,255,255,0.15) 0%,
-      rgba(255,255,255,0.35) 20%,
+      rgba(255,255,255,0.10) 0%,
+      rgba(255,255,255,0.25) 15%,
+      rgba(255,255,255,0.45) 30%,
       rgba(255,255,255,0.65) 45%,
-      rgba(255,255,255,0.92) 70%,
-      #ffffff 100%
+      rgba(255,255,255,0.85) 55%,
+      transparent 65%
     );
 
   overflow: hidden;

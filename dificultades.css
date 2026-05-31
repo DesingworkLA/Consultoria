@@ -140,8 +140,20 @@ iframe{
   border: none;
   border-radius: 20px;
   display: block;
-  margin: 30px auto;
   overflow: hidden;
+}
+
+.calendar-container{
+  background: #ffffff;
+
+  border-radius: 24px;
+
+  padding: 12px;
+
+  margin-top: 30px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
 }
 
 /* DESVANECIDO HACIA EL CALENDARIO */
@@ -353,4 +365,8 @@ body.dark-mode .contacto > *:last-child{
 /* LUNA (cuando dark mode está activo) */
 body.dark-mode #darkModeToggle::before{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f0d67b' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
+}
+
+body.dark-mode .calendar-container{
+  background: #ffffff;
 }

@@ -370,10 +370,10 @@ body::before{
   background-image: url("fotos/Fondo Dificultades.png");
   background-repeat: no-repeat;
 
-  background-size: 85%;
+  background-size: 100%;
   background-position: center center;
 
-  opacity: 0.30;
+  opacity: 0.50;
 
   pointer-events: none;
   z-index: -1;

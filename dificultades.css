@@ -383,3 +383,38 @@ body::before{
 .contenido-centro {
   text-align: center;
 }
+
+/* CELULAAAAAAR */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .contenido {
+    padding: 15px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  iframe {
+    height: 500px;
+  }
+}

@@ -373,7 +373,7 @@ body::before{
   background-size: 100%;
   background-position: center center;
 
-  opacity: 1;
+  opacity: 0,70;
 
   pointer-events: none;
   z-index: -1;

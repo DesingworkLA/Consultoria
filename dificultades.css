@@ -359,3 +359,28 @@ body.dark-mode .contacto > *:last-child{
 body.dark-mode #darkModeToggle::before{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f0d67b' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
 }
+
+/* FONDOOOOOOOOO */
+
+body::before{
+  content: "";
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url("fotos/camino-aprendizaje.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  opacity: 0.08;
+
+  pointer-events: none;
+
+  z-index: -1;
+}

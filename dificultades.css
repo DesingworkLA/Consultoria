@@ -380,4 +380,6 @@ body::before{
   mix-blend-mode: soft-light;
 }
 
-
+.contenido-centro {
+  text-align: center;
+}

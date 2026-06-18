@@ -1,1 +1,99 @@
+<!DOCTYPE html>
 
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluación Psicológica y Psicopedagógica</title>
+
+  <link rel="stylesheet" href="evaluacionpsicologica.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<button id="darkModeToggle"></button>
+
+<div class="tree-design tree-top-right"></div>
+<div class="tree-design tree-bottom-left"></div>
+
+<div class="logo-container">
+  <a href="index.html">
+    <img src="fotos/Logo Vane rec.png" alt="Logo principal" class="logo">
+  </a>
+</div>
+
+<section class="hero">
+
+  <h1>Evaluación Psicológica y Psicopedagógica</h1>
+
+  <p>
+    Se realiza una valoración completa mediante la aplicación de pruebas
+    estandarizadas, entrevistas clínicas y observación.
+  </p>
+
+</section>
+
+<section class="contenido">
+
+  <h2>¿Qué incluye la evaluación?</h2>
+
+  <ul>
+    <li>Evaluación emocional y conductual</li>
+    <li>Evaluación del aprendizaje</li>
+    <li>Evaluación de atención, memoria y funciones ejecutivas</li>
+    <li>Detección de trastornos del neurodesarrollo</li>
+    <li>Elaboración de informes diagnósticos</li>
+    <li>Devolución y orientación a la familia</li>
+  </ul>
+
+</section>
+
+<section class="contenido contenido-centro">
+
+  <h2>Plan de intervención individualizado</h2>
+
+  <p>
+    A partir de los resultados obtenidos, se establece un plan de
+    intervención individualizado orientado a potenciar fortalezas,
+    atender necesidades específicas y brindar estrategias de apoyo
+    tanto a la persona evaluada como a su entorno familiar y educativo.
+  </p>
+
+</section>
+
+<section class="contacto">
+
+  <h2>Agenda tu consulta</h2>
+
+  <p>
+    Selecciona tu día y hora disponible.
+  </p>
+
+  <iframe
+    src="https://calendly.com/stevendinito/new-meeting"
+    width="100%"
+    height="700"
+    frameborder="0">
+  </iframe>
+
+</section>
+
+<script>
+  const toggleBtn = document.getElementById("darkModeToggle");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+      toggleBtn.innerHTML = "";
+    } else {
+      toggleBtn.innerHTML = "";
+    }
+  });
+</script>
+
+</body>
+</html>

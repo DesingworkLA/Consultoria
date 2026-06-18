@@ -376,3 +376,17 @@ iframe{
 height: 500px;
 }
 }
+
+.bg-decoration {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-decoration svg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}

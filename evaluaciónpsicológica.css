@@ -5,42 +5,37 @@ padding: 0;
 box-sizing: border-box;
 }
 
-/* GENERAL */
 body{
-font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 
-background:
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(124, 166, 217, 0.20),
+        transparent 30%
+    ),
 
-radial-gradient(
-circle at top right,
-rgba(127, 166, 217, 0.22),
-transparent 30%
-),
+    radial-gradient(
+        circle at bottom right,
+        rgba(124, 166, 217, 0.18),
+        transparent 35%
+    ),
 
-radial-gradient(
-circle at bottom left,
-rgba(127, 166, 217, 0.18),
-transparent 28%
-),
+    radial-gradient(
+        circle at bottom left,
+        rgba(124, 166, 217, 0.12),
+        transparent 28%
+    ),
 
-linear-gradient(
-180deg,
-#f3f8ff 0%,
-#eaf2fc 35%,
-#dde9f8 70%,
-#ffffff 100%
-);
+    linear-gradient(
+        135deg,
+        #f8fbff 0%,
+        #eef6ff 50%,
+        #e7f2ff 100%
+    );
 
-color: #333;
-line-height: 1.6;
-overflow-x: hidden;
-position: relative;
-}
-
-.tree-design{
-position: fixed;
-z-index: -1;
-opacity: 0.08;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* LOGO */
@@ -369,74 +364,24 @@ height: 500px;
 }
 }
 
-/* ==========================================
-   FONDO EVALUACIÓN PSICOLÓGICA
-========================================== */
-
-.evaluacion-section{
-    position: relative;
-    overflow: hidden;
-
-    background:
-    radial-gradient(
-        circle at top left,
-        rgba(124, 166, 217, 0.20),
-        transparent 30%
-    ),
-
-    radial-gradient(
-        circle at bottom right,
-        rgba(124, 166, 217, 0.18),
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at bottom left,
-        rgba(124, 166, 217, 0.12),
-        transparent 28%
-    ),
-
-    linear-gradient(
-        135deg,
-        #f8fbff 0%,
-        #eef6ff 50%,
-        #e7f2ff 100%
-    );
-
-    isolation: isolate;
-}
-
-/* Líneas cognitivas */
-
-.evaluacion-section::before{
+body::before{
     content:"";
-    position:absolute;
+    position:fixed;
     inset:0;
 
     background-image:
-        radial-gradient(circle, rgba(124,166,217,.35) 2px, transparent 2px);
+        radial-gradient(circle, rgba(124,166,217,.25) 2px, transparent 2px);
 
-    background-size: 180px 180px;
+    background-size:180px 180px;
 
-    opacity:.35;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            transparent,
-            black 15%,
-            black 85%,
-            transparent
-        );
-
+    opacity:.4;
     pointer-events:none;
+    z-index:-2;
 }
 
-/* Curvas decorativas */
-
-.evaluacion-section::after{
+body::after{
     content:"";
-    position:absolute;
+    position:fixed;
     inset:0;
 
     background:
@@ -461,14 +406,6 @@ height: 500px;
             transparent 92px
         );
 
-    opacity:.8;
-
     pointer-events:none;
-}
-
-/* Contenido encima */
-
-.evaluacion-section > *{
-    position: relative;
-    z-index: 2;
+    z-index:-1;
 }

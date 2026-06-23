@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orientación a Familias</title>
 
+  <link rel="stylesheet" href="psicoterapia.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+<button id="darkModeToggle"></button>
+
+<div class="tree-design tree-top-right"></div>
+<div class="tree-design tree-bottom-left"></div>
+
+<div class="logo-container">
+  <a href="index.html">
+    <img src="fotos/Logo Vane rec.png" alt="Logo principal" class="logo">
+  </a>
+</div>
+
+<section class="hero">
+  <h1>Orientación a Familias</h1>
+
+  <p>
+    Se brinda orientación práctica y personalizada para favorecer el desarrollo emocional y conductual en el contexto familiar.
+  </p>
+</section>
+
+<section class="contenido">
+
+  <h2>Se trabaja en:</h2>
+
+  <ul>
+    <li>Establecimiento de límites</li>
+    <li>Manejo de conductas desafiantes</li>
+    <li>Acompañamiento emocional</li>
+    <li>Pautas de crianza</li>
+    <li>Apoyo en el ámbito escolar</li>
+    <li>Mejora de la comunicación familiar</li>
+  </ul>
+
+</section>
+
+<section class="contenido contenido-centro">
+
+  <p>
+    El objetivo es fortalecer el vínculo familiar y promover un entorno de desarrollo saludable.
+  </p>
+
+</section>
+
+<section class="contacto">
+
+  <h2>Agenda tu consulta</h2>
+
+  <p>
+    Selecciona tu día y hora disponible.
+  </p>
+
+  <iframe
+    src="https://calendly.com/stevendinito/orientacion-familiar"
+    width="100%"
+    height="700"
+    frameborder="0">
+  </iframe>
+
+</section>
+
+<script>
+  const toggleBtn = document.getElementById("darkModeToggle");
+
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+      toggleBtn.innerHTML = "";
+    } else {
+      toggleBtn.innerHTML = "";
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -176,7 +176,7 @@ iframe{
   transform: rotate(-1deg);
 
   text-shadow:
-    2px 2px 0 rgba(136,214,196,0.25);
+  2px 2px 0 rgba(232,161,136,0.25);
 }
 
 /* TITULOS SECUNDARIOS */
@@ -195,7 +195,7 @@ iframe{
   transform: rotate(-1deg);
 
   text-shadow:
-    2px 2px 0 rgba(136,214,196,0.25);
+  2px 2px 0 rgba(232,161,136,0.25);
 }
 
 /* LISTA ESTILO DOODLE ELEGANTE */
@@ -347,12 +347,12 @@ body.dark-mode .contacto > *:last-child{
   background-position: center;
   background-size: contain;
 
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f5d60' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M5 19l1.5-1.5'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B86E55' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3Cpath d='M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M5 19l1.5-1.5'/%3E%3C/svg%3E");
 }
 
 /* LUNA (cuando dark mode está activo) */
 body.dark-mode #darkModeToggle::before{
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239fe7d8' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f0b29d' stroke-width='2'%3E%3Cpath d='M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z'/%3E%3C/svg%3E");
 }
 
 .contenido-centro {
@@ -392,4 +392,16 @@ img, iframe {
   iframe {
     height: 500px;
   }
+}
+
+.contacto{
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(232,161,136,0.15) 0%,
+      rgba(232,161,136,0.25) 20%,
+      rgba(255,255,255,0.65) 50%,
+      rgba(255,255,255,0.92) 80%,
+      #ffffff 100%
+    );
 }

@@ -13,21 +13,21 @@ body{
 
     radial-gradient(
       circle at top right,
-      rgba(136, 214, 196, 0.22),
+     rgba(232, 161, 136, 0.22),
       transparent 30%
     ),
 
     radial-gradient(
       circle at bottom left,
-      rgba(136, 214, 196, 0.18),
+      rgba(232, 161, 136, 0.18),
       transparent 28%
     ),
 
     linear-gradient(
       180deg,
-      #eef8f6 0%,
-      #e8f4f2 35%,
-      #dff0ed 70%,
+      #fdf2ee 0%,
+      #fbe9e3 35%,
+      #f8dfd6 70%,
       #ffffff 100%
     );
 
@@ -89,7 +89,7 @@ body{
 .btn{
   display: inline-block;
   text-decoration: none;
-  background: #7bb8bd;
+  background: #E8A188;
   color: white;
   padding: 14px 30px;
   border-radius: 8px;
@@ -127,7 +127,7 @@ body{
 
 .contenido,
 .contacto{
-  background: rgba(255,255,255,0.58);
+  background: rgba(232,161,136,0.25);
   backdrop-filter: blur(6px);
   border-radius: 24px;
   margin-top: 30px;
@@ -171,7 +171,7 @@ iframe{
 
   letter-spacing: 1px;
 
-  color: #2f5d60;
+  color: #B86E55;
 
   transform: rotate(-1deg);
 
@@ -190,7 +190,7 @@ iframe{
 
   letter-spacing: 1px;
 
-  color: #2f5d60;
+  color: #B86E55;
 
   transform: rotate(-1deg);
 
@@ -211,7 +211,7 @@ iframe{
 
   margin-bottom: 22px;
 
-  color: #4b5c5e;
+  color: #B86E55;
 }
 
 .contenido li::before{
@@ -224,7 +224,7 @@ iframe{
 
   font-size: 1.2rem;
 
-  color: #2f5d60;
+  color: #B86E55;
 
   opacity: 0.95;
 }
@@ -254,7 +254,7 @@ iframe{
 
   font-size: 1.2rem;
 
-  color: #2f5d60;
+  color: #B86E55;
 
   z-index: 9999;
 
@@ -303,17 +303,17 @@ body.dark-mode li{
 body.dark-mode .hero h1,
 body.dark-mode .contenido h2,
 body.dark-mode .contacto h2{
-  color: #9fe7d8;
+  color: #B86E55;
 }
 
 body.dark-mode #darkModeToggle{
   background: rgba(30,30,30,0.7);
 
-  color: #9fe7d8;
+  color: #f0b29d;
 }
 
 body.dark-mode .contacto h2{
-  color: #9fe7d8;
+  color: #f0b29d;
 }
 
 body.dark-mode iframe{

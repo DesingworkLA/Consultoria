@@ -377,20 +377,15 @@ img, iframe {
 
 .family-bg{
   position: fixed;
-  top: 0;
-  right: 0;
 
-  width: 700px;
-  height: 700px;
+  bottom: -120px;
+  right: -120px;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(232,161,136,0.18),
-      transparent 70%
-    );
+  width: 850px;
 
-  filter: blur(80px);
+  opacity: 0.8;
+
+  pointer-events: none;
 
   z-index: -1;
 }

@@ -374,3 +374,18 @@ img, iframe {
       #ffffff 100%
     );
 }
+
+.family-bg{
+  position: fixed;
+  bottom: -50px;
+  right: -50px;
+  width: 650px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.family-bg svg{
+  width: 100%;
+  height: auto;
+}

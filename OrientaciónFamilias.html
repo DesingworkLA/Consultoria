@@ -13,10 +13,30 @@
 
 <body>
 
-  <div class="family-bg">
-<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-...
-</svg>
+<div class="family-bg">
+  <svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.08">
+      <!-- Cabezas -->
+      <circle cx="280" cy="220" r="40" stroke="#88D6C4" stroke-width="3"/>
+      <circle cx="520" cy="220" r="40" stroke="#88D6C4" stroke-width="3"/>
+      <circle cx="400" cy="320" r="30" stroke="#88D6C4" stroke-width="3"/>
+
+      <!-- Línea continua -->
+      <path d="
+        M280 260
+        C280 340 330 380 400 380
+        C470 380 520 340 520 260
+        M400 350
+        C400 450 360 500 300 560
+        M400 350
+        C400 450 440 500 500 560
+      "
+      stroke="#88D6C4"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+    </g>
+  </svg>
 </div>
 
 <button id="darkModeToggle"></button>

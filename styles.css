@@ -197,10 +197,15 @@ body > *:not(.logo) {
   height: 100%;
 }
 
+.image-card {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .image-card img {
-  width: 380px;
+  width: 100%;
   height: auto;
-  min-height: 300px;
+  display: block;
   object-fit: cover;
 }
 

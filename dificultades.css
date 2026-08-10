@@ -198,7 +198,7 @@ iframe{
 
   color: #8a6712;
 
-  transform: rotate(-1deg);
+  transform: none;
 
   text-shadow:
     2px 2px 0 rgba(230,193,90,0.25);

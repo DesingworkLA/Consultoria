@@ -113,8 +113,8 @@ body > *:not(.logo) {
 }
 
 .profile-image {
-  width: 300px;
-  height: 320px;
+  width: 380px;
+  height: auto;
   max-width: 100%;
   display: block;
   border-radius: 18px;

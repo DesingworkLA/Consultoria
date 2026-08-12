@@ -403,3 +403,19 @@ position: fixed;
 z-index: -1;
 opacity: 0.08;
 }
+
+.whatsapp-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}

@@ -329,10 +329,6 @@ body.dark-mode .contacto iframe{
   background: #ffffff;
 }
 
-body.dark-mode .contacto > *:last-child{
-  background: #ffffff;
-}
-
 #darkModeToggle{
   display: flex;
   align-items: center;

@@ -63,7 +63,7 @@ body > *:not(.logo) {
 }
 
 .logo img {
-  width: 140px;
+  width: 180px;
   height: auto;
   display: block;
   object-fit: contain;

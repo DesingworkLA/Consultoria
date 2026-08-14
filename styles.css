@@ -63,11 +63,12 @@ body > *:not(.logo) {
 }
 
 .logo img {
-  height: 50px;
-  width: auto;
+  width: 140px;
+  height: auto;
   display: block;
   object-fit: contain;
   cursor: pointer;
+  image-rendering: auto;
 }
 
 /* ========================= HEADER ========================= */
